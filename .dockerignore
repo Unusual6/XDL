@@ -1,0 +1,26 @@
+# .dockerignore 示例
+# 依赖目录（在构建阶段已处理，无需复制）
+venv/
+node_modules/
+__pycache__/
+
+# 环境配置（敏感信息，应通过环境变量传入）
+.env
+.env.local
+*.pem
+
+# 日志和临时文件
+logs/
+tmp/
+*.log
+
+# 开发工具配置
+.git/
+.idea/
+.vscode/
+Dockerfile
+.dockerignore
+
+# 大文件（如数据库备份、视频等）
+*.sql
+*.mp4

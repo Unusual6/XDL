@@ -1,0 +1,24 @@
+# requirements.txt（从 environment.yml 提取的所有依赖）
+appdirs
+future
+iso8601
+lxml
+networkx
+numpy
+opencv-python-headless==4.12.0.88
+pyyaml
+serial
+tabulate
+termcolor
+matplotlib
+# 补充 yml 中的系统依赖（pip 会自动安装兼容版本）
+# bzip2
+# expat
+# libffi
+# ncurses
+# openssl
+# readline
+# sqlite
+# tk
+# xz
+# zlib

@@ -1,0 +1,141 @@
+2025-09-30 11:51:37,618 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,619 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,620 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,620 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,621 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,622 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,623 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,623 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-09-30 11:51:37,623 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:51:37,624 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,625 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:51:37,626 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,627 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,627 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,628 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,628 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:51:37,629 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,629 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:51:37,630 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,630 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,631 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_chloroacetyl chloride (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,631 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,632 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_chloroacetyl chloride (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,633 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -2.0 mL. Setting to 0.
+2025-09-30 11:51:37,633 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:51:37,634 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,634 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:51:37,635 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,635 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,637 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,637 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,638 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,638 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-09-30 11:51:37,639 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:51:37,640 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,640 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:51:37,642 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_half-saturated aqueous sodium acetate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,642 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,643 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_half-saturated aqueous sodium acetate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,644 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -25.0 mL. Setting to 0.
+2025-09-30 11:51:37,644 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:51:37,645 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,645 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:51:37,646 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,646 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:51:37,647 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:51:37,647 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,407 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,408 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,409 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,409 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,410 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,411 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,413 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,413 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-09-30 11:55:21,414 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:55:21,415 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,415 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:55:21,416 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,417 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,418 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,418 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,419 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:55:21,419 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,420 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:55:21,421 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,421 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,422 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_chloroacetyl chloride (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,422 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,423 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_chloroacetyl chloride (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,423 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -2.0 mL. Setting to 0.
+2025-09-30 11:55:21,424 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:55:21,424 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,425 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:55:21,426 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,426 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,428 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,429 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,430 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,430 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-09-30 11:55:21,430 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:55:21,432 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,432 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:55:21,433 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_half-saturated aqueous sodium acetate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,433 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,434 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_half-saturated aqueous sodium acetate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,434 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -25.0 mL. Setting to 0.
+2025-09-30 11:55:21,435 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:55:21,436 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,437 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:55:21,438 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,438 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:55:21,438 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:55:21,439 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,031 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,031 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,031 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,032 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,032 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,032 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,033 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,033 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-09-30 11:56:03,033 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:56:03,034 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,034 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:56:03,035 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,036 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,036 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,037 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,037 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:56:03,038 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,038 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:56:03,039 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,039 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,040 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_chloroacetyl chloride (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,040 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,041 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_chloroacetyl chloride (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,041 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -2.0 mL. Setting to 0.
+2025-09-30 11:56:03,041 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:56:03,042 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,043 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:56:03,043 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,044 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,045 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,045 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,046 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,046 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-09-30 11:56:03,046 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:56:03,048 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,048 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:56:03,051 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_half-saturated aqueous sodium acetate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,051 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,053 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_half-saturated aqueous sodium acetate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,054 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -25.0 mL. Setting to 0.
+2025-09-30 11:56:03,054 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-09-30 11:56:03,055 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,055 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-09-30 11:56:03,056 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_G (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,056 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-09-30 11:56:03,057 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-09-30 11:56:03,057 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
