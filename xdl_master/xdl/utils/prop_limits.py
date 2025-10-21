@@ -137,22 +137,16 @@ POSITIVE_SCIENTIFIC_FLOAT_PATTERN: str = (
 )
 
 #: Pattern to match all accepted volumes units case insensitvely, or empty string.
-VOLUME_UNITS_PATTERN: str = (
-    r"(l|L|litre|litres|liter|liters|ml|mL|cm3|cc|milliltre|millilitres|milliliter|milliliters|cl|cL|centiltre|centilitres|centiliter|centiliters|dl|dL|deciltre|decilitres|deciliter|deciliters|ul|uL|μl|μL|microlitre|microlitres|microliter|microliters)?"
-)
+VOLUME_UNITS_PATTERN: str = r"(l|L|litre|litres|liter|liters|ml|mL|cm3|cc|milliltre|millilitres|milliliter|milliliters|cl|cL|centiltre|centilitres|centiliter|centiliters|dl|dL|deciltre|decilitres|deciliter|deciliters|ul|uL|μl|μL|microlitre|microlitres|microliter|microliters)?"
 
 #: Pattern to match all accepted mass units, or empty string.
-MASS_UNITS_PATTERN: str = (
-    r"(g|gram|grams|kg|kilogram|kilograms|mg|milligram|milligrams|ug|μg|microgram|micrograms)?"
-)
+MASS_UNITS_PATTERN: str = r"(g|gram|grams|kg|kilogram|kilograms|mg|milligram|milligrams|ug|μg|microgram|micrograms)?"
 
 #: Pattern to match all accepted temperature units, or empty string.
 TEMP_UNITS_PATTERN: str = r"(°C|K|F)?"
 
 #: Pattern to match all accepted time units, or empty string.
-TIME_UNITS_PATTERN: str = (
-    r"(days|day|h|hr|hrs|hour|hours|m|min|mins|minute|minutes|s|sec|secs|second|seconds)?"
-)
+TIME_UNITS_PATTERN: str = r"(days|day|h|hr|hrs|hour|hours|m|min|mins|minute|minutes|s|sec|secs|second|seconds)?"
 
 #: Pattern to match all accepted pressure units, or empty string.
 PRESSURE_UNITS_PATTERN: str = r"(mbar|bar|torr|Torr|mmhg|mmHg|atm|Pa|pa)?"

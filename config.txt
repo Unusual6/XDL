@@ -1,9 +1,17 @@
-vessel="reactor"               #可修改
-id=123                         #不可修改
-role=reagent                   #可修改
-reagent="glacial acetic acid"  #可修改
-volume="15 mL"                 #可修改
-speed="40.0"                   #可修改
-stir="True"                    #可修改
-solid="False"                  #可修改
-comment="xxx"                  #可修改
+github
+
+git commit -m "para" --no-verify
+
+# 先删除现有的 SSH 远程地址
+git remote rm origin
+
+# 添加 HTTPS 远程地址（确保地址正确）
+git remote add origin https://github.com/Unusual6/XDL.git
+
+# 清除可能的 HTTPS 凭据缓存
+git config --global --unset credential.helper
+
+# 临时关闭 SSL 验证（解决部分证书问题，推送后可再开启）
+git config --global http.sslVerify false
+
+git push --set-upstream origin main

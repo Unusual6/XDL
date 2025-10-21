@@ -48,12 +48,12 @@ from xdl_master.xdl import XDL
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="XDL流程分步执行工具（画图/编译/执行）"
-    )
+    parser = argparse.ArgumentParser(description="XDL流程分步执行工具（画图/编译/执行）")
 
-    parser.add_argument("--xdl_file", default="chem_yan.xdl", type=str, help="输入xdl")
-    # parser.add_argument('--xdl_file', default='chem_parallel.xdl', type=str, help="yan.xdl）")
+    parser.add_argument(
+        "--xdl_file", default="files/chem_yan.xdl", type=str, help="输入xdl"
+    )
+    # parser.add_argument('--xdl_file', default='files/chem_parallel.xdl', type=str, help="yan.xdl）")
 
     parser.add_argument(
         "--graph_file",
@@ -121,9 +121,7 @@ def main():
             )
 
         # 加载XDL并执行编译
-        print(
-            f"[第二步：编译] 从 {args.xdl_file} 编译，使用Graph文件：{args.graph_file}"
-        )
+        print(f"[第二步：编译] 从 {args.xdl_file} 编译，使用Graph文件：{args.graph_file}")
         x = XDL(args.xdl_file)
         x.prepare_for_execution(
             graph_file=args.graph_file,

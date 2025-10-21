@@ -292,6 +292,4 @@ plt.tight_layout()
 plt.savefig("graph_valve_cluster.png", dpi=300, bbox_inches="tight", facecolor="white")
 plt.close()
 
-print(
-    f"簇状拓扑图生成完成！共{len(valve_centers)}个Valve簇，已保存为 graph_valve_cluster.png"
-)
+print(f"簇状拓扑图生成完成！共{len(valve_centers)}个Valve簇，已保存为 graph_valve_cluster.png")
