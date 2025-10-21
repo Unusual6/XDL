@@ -1,0 +1,63 @@
+<?xdl version="1.0.0" ?>
+<XDL>
+
+<Synthesis>
+
+  <Hardware>
+    <Component
+      id="reactor"
+      type="reactor" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="AI(NO3)3"
+      id="AI(NO3)3"
+      role="reagent" />
+    <Reagent
+      name="NHз·H2O"
+      id="NHз·H2O"
+      role="reagent" />
+    <Reagent
+      name="Y(NO3)3"
+      id="Y(NO3)3"
+      role="reagent" />
+    <Reagent
+      name="ZrOCl2"
+      id="ZrOCl2"
+      role="reagent" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      vessel="reactor"
+      reagent="ZrOCl2"
+      volume="15 mL"
+      speed="40.0"
+      queue="A"/>
+    <Add
+      vessel="reactor"
+      reagent="Y(NO3)3"
+      volume="3 mL"
+      stir="True"
+      speed="40.0"
+      queue="B"/>
+    <Add
+      vessel="reactor"
+      reagent="AI(NO3)3"
+      volume="2 mL"
+      stir="True"
+      speed="40.0"
+      queue="B"/>
+    <Add
+      vessel="reactor"
+      reagent="NHз·H2O"
+      volume="25 mL"
+      stir="True"
+      speed="40.0"
+      queue="B"/>
+  </Procedure>
+
+</Synthesis>
+
+</XDL>

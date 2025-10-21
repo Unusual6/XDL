@@ -6,6 +6,7 @@ from ..reagents import Reagent
 from ..steps import AbstractBaseStep, AbstractStep, Step
 from ..errors import XDLError
 
+
 def get_valid_attrs(target_class: type) -> List[str]:
     """Get valid attrs for passing to target_class __init__ methods.
 
@@ -15,18 +16,17 @@ def get_valid_attrs(target_class: type) -> List[str]:
     Returns:
         List[str]: List of arg names for target_class __init__ method.
     """
-    valid_attrs = [
-        k
-        for k in target_class.__init__.__annotations__
-        if k != 'return'
-    ]
-    if (AbstractStep in target_class.__bases__
-            or AbstractBaseStep in target_class.__bases__):
-        valid_attrs.append('repeat')
+    valid_attrs = [k for k in target_class.__init__.__annotations__ if k != "return"]
+    if (
+        AbstractStep in target_class.__bases__
+        or AbstractBaseStep in target_class.__bases__
+    ):
+        valid_attrs.append("repeat")
     elif target_class == Component:
-        valid_attrs.remove('component_type')
-        valid_attrs.append('type')
+        valid_attrs.remove("component_type")
+        valid_attrs.append("type")
     return valid_attrs
+
 
 def check_attrs_are_valid(attrs: Dict[str, str], target_class: type) -> None:
     """Check that attrs can be passed into target_class like
@@ -43,14 +43,20 @@ def check_attrs_are_valid(attrs: Dict[str, str], target_class: type) -> None:
  __init__
             method.
     """
-    valid_attrs = get_valid_attrs(target_class) + ['children', 'repeat','speed']
+    valid_attrs = get_valid_attrs(target_class) + [
+        "children",
+        "repeat",
+        "speed",
+        "queue",
+    ]
     for attr, _ in attrs.items():
         if attr not in valid_attrs:
             raise XDLError(
-                f'{attr} is not a valid attribute for {target_class.__name__}.')
+                f"{attr} is not a valid attribute for {target_class.__name__}."
+            )
 
-def check_reagents_are_all_declared(
-        steps: List[Step], reagents: List[Reagent]) -> None:
+
+def check_reagents_are_all_declared(steps: List[Step], reagents: List[Reagent]) -> None:
     """Check all reagents used in steps are declared in Reagents section.
 
     Args:
@@ -68,12 +74,14 @@ def check_reagents_are_all_declared(
                 step_reagent = step.properties[prop]
                 if step_reagent not in reagent_ids:
                     raise XDLError(
-                        f'{step_reagent} for {step.name} step not declared in\
- Reagents section.')
+                        f"{step_reagent} for {step.name} step not declared in\
+ Reagents section."
+                    )
 
 
 def check_vessels_are_all_declared(
-        steps: List[Step], components: List[Component]) -> None:
+    steps: List[Step], components: List[Component]
+) -> None:
     """Check all components used in steps are declared in Hardware section.
 
     Args:
@@ -87,9 +95,10 @@ def check_vessels_are_all_declared(
     component_ids = [component.id for component in components]
     for step in steps:
         for prop in step.properties:
-            if 'vessel' in prop or prop == 'rotavap_name':
+            if "vessel" in prop or prop == "rotavap_name":
                 step_vessel = step.properties[prop]
                 if step_vessel and step_vessel not in component_ids:
                     raise XDLError(
-                        f'{step_vessel} for {step.name} step not declared in\
- Hardware section.')
+                        f"{step_vessel} for {step.name} step not declared in\
+ Hardware section."
+                    )

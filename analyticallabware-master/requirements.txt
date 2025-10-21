@@ -1,0 +1,5 @@
+flake8
+pre-commit
+black
+SerialLabware @ git+https://git@gitlab.com:croningroup/chemputer/seriallabware.git
+ChemputerAPI @ git+https://git@gitlab.com:croningroup/chemputer/chemputerapi.git

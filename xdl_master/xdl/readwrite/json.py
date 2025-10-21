@@ -1,0 +1,502 @@
+import json
+from typing import Any, Dict, List, Union
+
+from xdl_master.xdl.context import Context
+from xdl_master.xdl.errors import XDLError
+from xdl_master.xdl.hardware import Component, Hardware
+from xdl_master.xdl.metadata import Metadata
+from xdl_master.xdl.parameters import Parameter
+from xdl_master.xdl.platforms import AbstractPlatform
+from xdl_master.xdl.readwrite.errors import (
+    XDLBlueprintNoID,
+    XDLInvalidPropError,
+    XDLInvalidStepTypeError,
+    XDLJSONBlueprintsNotListError,
+    XDLJSONBlueprintsSynthesisNotDictError,
+    XDLJSONHardwareNotArrayError,
+    XDLJSONInvalidSectionError,
+    XDLJSONMissingHardwareError,
+    XDLJSONMissingPropertiesError,
+    XDLJSONMissingReagentsError,
+    XDLJSONMissingStepNameError,
+    XDLJSONMissingStepsError,
+    XDLJSONNotBlueprintsAndSynthesis,
+    XDLJSONReagentsNotArrayError,
+    XDLJSONStepsNotArrayError,
+)
+from xdl_master.xdl.reagents import Reagent
+from xdl_master.xdl.steps import Step
+from xdl_master.xdl.utils.misc import format_property
+
+# For type annotations
+from xdl_master.xdl.variables import Variable
+
+if False:
+    from xdl import XDL
+
+#: Valid sections for XDL JSON.
+VALID_SECTIONS: List[str] = ["steps", "reagents", "hardware", "metadata", "parameters"]
+
+
+def xdl_from_json_file(
+    xdl_json_file: str, platform: AbstractPlatform, context: Context
+) -> Dict[str, Any]:
+    """Convert .json file with JSON XDL format to dict containing all
+    information necessary to initialise a XDL object.
+
+    Args:
+        xdl_json_file (str): Path to XDL JSON file.
+        platform (AbstractPlatform): Platform to use when constructing XDL
+            object.
+
+    Returns:
+        Dict[str, Any]: Dict containing all information necessary to initialise
+            a XDL object. Format is the following:
+
+            .. code-block:: python
+
+                {
+                    "steps": steps,
+                    "reagents": reagents,
+                    "hardware": hardware,
+                }
+    """
+    with open(xdl_json_file) as fd:
+        xdl_json = json.load(fd)
+    return xdl_from_json(xdl_json=xdl_json, platform=platform, context=context)
+
+
+def validate_json_blueprint(xdl_json: Dict[str, Any]) -> None:
+    """Validate format of XDL JSON Dict containing Blueprints and Synthesis is
+    correct.
+
+    Args:
+        xdl_json (Dict[str, Any]): XDL JSON loaded into dict, containing the
+            keys "Bluprints" and "Synthesis".
+
+    Raises:
+        XDLJSONError: Raises various subclasses of this error if the XDL JSON is
+            not in the correct format.
+    """
+    if type(xdl_json["Blueprints"]) is not list:
+        raise XDLJSONBlueprintsNotListError()
+
+    if type(xdl_json["Synthesis"]) is not dict:
+        raise XDLJSONBlueprintsSynthesisNotDictError()
+
+    for blueprint in xdl_json["Blueprints"]:
+
+        if "id" not in blueprint:
+            raise XDLBlueprintNoID(blueprint)
+        blueprint_copy = blueprint.copy()
+        blueprint_copy.pop("id", None)
+        validate_xdl_json(xdl_json=blueprint)
+
+    validate_xdl_json(xdl_json["Synthesis"])
+
+
+def validate_xdl_json(xdl_json: Dict[str, Any]) -> None:
+    """Validate XDL JSON Dict is correct format.
+
+    Args:
+        xdl_json (Dict[str, Any]): XDL JSON loaded into dict.
+
+    Raises:
+        XDLJSONError: Raises various subclasses of this error if the XDL JSON is
+            not in the correct format.
+    """
+
+    if any(i for i in xdl_json if i in ["Blueprints", "Synthesis"]):
+        if not all(i in xdl_json for i in ["Blueprints", "Synthesis"]):
+            provided = [k for k in ["Blueprints", "Synthesis"] if k in xdl_json]
+            raise XDLJSONNotBlueprintsAndSynthesis(provided=provided)
+        validate_json_blueprint(xdl_json=xdl_json)
+
+    else:
+        if "steps" not in xdl_json:
+            raise XDLJSONMissingStepsError()
+
+        if "reagents" not in xdl_json:
+            raise XDLJSONMissingReagentsError()
+
+        if "hardware" not in xdl_json:
+            raise XDLJSONMissingHardwareError()
+
+        if type(xdl_json["steps"]) is not list:
+            raise XDLJSONStepsNotArrayError()
+
+        if type(xdl_json["reagents"]) is not list:
+            raise XDLJSONReagentsNotArrayError()
+
+        if type(xdl_json["hardware"]) is not list:
+            raise XDLJSONHardwareNotArrayError()
+
+        for k in xdl_json:
+            if k != "id" and k not in VALID_SECTIONS:
+                raise XDLJSONInvalidSectionError(k)
+
+        for step_json in xdl_json["steps"]:
+            validate_xdl_step_json(step_json)
+
+        for reagent_json in xdl_json["reagents"]:
+            validate_xdl_element_json(reagent_json)
+
+        for component_json in xdl_json["hardware"]:
+            validate_xdl_element_json(component_json)
+
+
+def validate_xdl_step_json(step_json: Dict[str, Any]) -> None:
+    """Validate given step from XDL JSON, recursively validating any child
+    steps.
+
+    Args:
+        step_json (Dict[str, Any]): Step dict from XDL JSON.
+
+    Raises:
+        XDLJSONMissingStepNameError: Step JSON is missing "name" parameter.
+        XDLJSONMissingPropertiesError: Step JSON is missing "properties"
+            parameter.
+    """
+    if "name" not in step_json:
+        raise XDLJSONMissingStepNameError()
+    if "properties" not in step_json:
+        raise XDLJSONMissingPropertiesError()
+    if "children" in step_json:
+        for child in step_json["children"]:
+            validate_xdl_step_json(child)
+
+
+def validate_xdl_element_json(xdl_element_json: Dict[str, Any]) -> None:
+    """Validate given xdl element from XDL JSON.
+
+    Args:
+        xdl_element_json (Dict[str, Any]): XDL element dict from XDL JSON.
+
+    Raises:
+        XDLJSONMissingPropertiesError: XDL element JSON is missing "properties"
+            parameter.
+    """
+    if "properties" not in xdl_element_json:
+        raise XDLJSONMissingPropertiesError()
+
+
+def xdl_from_json(
+    xdl_json: Dict[str, Any], platform: AbstractPlatform, context: Context
+) -> Dict[str, Any]:
+    """Convert JSON XDL format dict to dict containing all data necessary for
+    initialising XDL object.
+
+    Args:
+        xdl_json (Dict[str, Any]): XDL JSON loaded into dict.
+        platform (AbstractPlatform): Platform to use when constructing XDL
+            object.
+
+    Returns:
+        Dict[str, Any]: Dict containing all data necessary for instantiating
+            XDL object. Format is the following:
+
+            .. code-block:: python
+
+                {
+                    "steps": steps,
+                    "reagents": reagents,
+                    "hardware": hardware,
+                    "parameters": parameters,
+                }
+    """
+    validate_xdl_json(xdl_json)
+
+    xdl_steps = {
+        "no_section": [],
+        "prep": [],
+        "reaction": [],
+        "workup": [],
+        "purification": [],
+    }
+
+    blueprints = {}
+    root = "Synthesis"
+
+    if any(i for i in xdl_json if i in ["Blueprints", "Synthesis"]):
+        root = "XDL"
+
+        # store blueprints first
+        for blueprint in xdl_json["Blueprints"]:
+            blueprints[blueprint["id"]] = {
+                k: blueprint[k] for k in blueprint if k != "id"
+            }
+
+        # then treat synthesis section as normal xdl json
+        xdl_json = xdl_json["Synthesis"]
+
+    for step_json in xdl_json["steps"]:
+
+        step = xdl_step_from_json(
+            step_json=step_json,
+            platform=platform,
+            context=context,
+            blueprints=blueprints,
+        )
+
+        # Section explicitly given, add to appropriate section
+        if "section" in step_json:
+            section = step_json["section"]
+            xdl_steps[section].append(step)
+
+        # Section not given, add to no section list
+        else:
+            xdl_steps["no_section"].append(step)
+
+    xdl_reagents = [
+        xdl_element_from_json(reagent_json, Reagent)
+        for reagent_json in xdl_json["reagents"]
+    ]
+    xdl_hardware = Hardware(
+        [
+            xdl_element_from_json(component_json, Component)
+            for component_json in xdl_json["hardware"]
+        ]
+    )
+    if "metadata" in xdl_json:
+        xdl_metadata = xdl_element_from_json(
+            {"name": "Metadata", "properties": xdl_json["metadata"]}, Metadata
+        )
+    else:
+        xdl_metadata = Metadata()
+
+    xdl_parameters = None
+
+    if "parameters" in xdl_json:
+        xdl_parameters = [
+            xdl_element_from_json(parameter, Parameter)
+            for parameter in xdl_json["parameters"]
+        ]
+
+    xdl_variables = None
+
+    if "variables" in xdl_json:
+        xdl_variables = [
+            xdl_element_from_json(variables_json, Variable)
+            for variables_json in xdl_json["variables"]
+        ]
+
+    xdl_variables = None
+
+    if "variables" in xdl_json:
+        xdl_variables = [
+            xdl_element_from_json(variables_json, Variable)
+            for variables_json in xdl_json["variables"]
+        ]
+
+    return {
+        "steps": xdl_steps,
+        "reagents": xdl_reagents,
+        "hardware": xdl_hardware,
+        "metadata": xdl_metadata,
+        "parameters": xdl_parameters,
+        "variables": xdl_variables,
+        "procedure_attrs": {},
+        "blueprints": blueprints,
+        "root": root,
+    }
+
+
+def xdl_step_from_json(
+    step_json: Dict[str, Any],
+    platform: AbstractPlatform,
+    context: Context,
+    blueprints: Dict[str, Any],
+) -> Step:
+    """Convert JSON XDL format step Dict to Step object.
+
+    Args:
+        step_json (Dict[str, Any]): Step dict from XDL JSON to convert to Step
+            object.
+        platform (AbstractPlatform): Platform to use when finding step class to
+            initialise.
+
+    Raises:
+        XDLInvalidPropError: Invalid prop used in ``step_json``.
+        XDLInvalidStepTypeError: Invalid step type in ``step_json``.
+
+    Returns:
+        Step: Step object loaded from XDL JSON step.
+    """
+    step_name = step_json["name"]
+
+    if step_name not in platform.step_library:
+        if blueprints:
+            if step_name not in blueprints:
+                raise XDLInvalidStepTypeError(step_name)
+            else:
+                return (step_name, step_json["properties"])
+        else:
+            raise XDLInvalidStepTypeError(step_name)
+
+    step_type = platform.step_library[step_name]
+    step_properties = step_json["properties"]
+
+    # Validate properties
+    for prop, val in step_properties.items():
+        if prop not in step_type.PROP_TYPES and prop not in ["comment", "context"]:
+            raise XDLInvalidPropError(step_name, prop)
+
+        # This is necessary for sanitisation to parse value correctly
+        if (val == "") and (prop != "comment"):
+            step_properties[prop] = None
+
+    step_properties["context"] = context
+
+    # Add children
+    step_children = []
+    if "children" in step_json:
+        step_children = [
+            xdl_step_from_json(
+                step_json=child,
+                platform=platform,
+                context=context,
+                blueprints=blueprints,
+            )
+            for child in step_json["children"]
+        ]
+
+    if step_children:
+        step_properties["children"] = step_children
+
+    # Instantiate step
+    step = step_type(**step_properties)
+
+    # Override step uuid with uuid given in JSON
+    step.uuid = step_json["uuid"]
+    return step
+
+
+def xdl_element_from_json(
+    xdl_element_json: Dict[str, Any], xdl_element_type: type
+) -> Union[Reagent, Component]:
+    """Convert JSON XDL element dict to object of given type.
+
+    Args:
+        xdl_element_json (Dict[str, Any]): XDL element dict from XDL JSON.
+        xdl_element_type (type): Reagent or Component.
+
+    Raises:
+        XDLInvalidPropError: Invalid prop given to instantiate xdl element with.
+
+    Returns:
+        Union[Reagent, Component]: Instantiated Reagent or Component object.
+    """
+    # Validate properties
+    xdl_element_properties = xdl_element_json["properties"]
+    for prop, val in xdl_element_properties.items():
+        if prop not in xdl_element_type.PROP_TYPES and prop != "comment":
+            raise XDLInvalidPropError(xdl_element_type.__name__, prop)
+        # This is necessary for sanitisation to parse value correctly
+        if val == "":
+            xdl_element_properties[prop] = None
+    return xdl_element_type(**xdl_element_properties)
+
+
+def xdl_to_json(xdl_obj: "XDL", full_properties: bool = False) -> Dict[str, Any]:
+    """Convert XDL object to JSON format immediately useable by ChemIDE.
+
+    Args:
+        xdl_obj (XDL): XDL object to convert to XDL JSON.
+        full_properties (bool): If True include all properties regardless of
+            whether they are internal properties or the same as the default
+            properties.
+
+    Returns:
+        Dict[str, Any]: XDL JSON dict produced from ``xdl_obj``.
+    """
+    xdl_steps_json = []
+    for step in xdl_obj.steps:
+        # Assign step section
+        for section, section_steps in xdl_obj.sections.items():  # noqa: B007
+            if step.uuid in section_steps:
+                break
+        else:
+            raise XDLError(f"Step uuid ({step.uuid}) not found in any section.")
+
+        # Create step JSON object and apply section
+        xdl_step_json = xdl_step_to_json(step, full_properties)
+        xdl_step_json["section"] = section
+        xdl_steps_json.append(xdl_step_json)
+
+    xdl_reagents_json = [xdl_element_to_json(reagent) for reagent in xdl_obj.reagents]
+    xdl_hardware_json = [
+        xdl_element_to_json(component) for component in xdl_obj.hardware
+    ]
+    xdl_metadata_json = {k: v for k, v in xdl_obj.metadata.properties.items() if v}
+    xdl_parameters_json = [
+        xdl_element_to_json(parameter) for parameter in xdl_obj.parameters
+    ]
+    xdl_json = {
+        "metadata": xdl_metadata_json,
+        "steps": xdl_steps_json,
+        "reagents": xdl_reagents_json,
+        "hardware": xdl_hardware_json,
+        "parameters": xdl_parameters_json,
+    }
+    return xdl_json
+
+
+def xdl_step_to_json(xdl_step: Step, full_properties: bool = False) -> Dict[str, Any]:
+    """Convert XDL Step to JSON format immediately useable by ChemIDE.
+
+    Args:
+        xdl_step (Step): XDL step to convert to XDL JSON format.
+        full_properties (bool): If ``True`` include all properties regardless of
+            whether they are internal properties or the same as the default
+            properties.
+
+    Returns:
+        Dict[str, Any]: XDL JSON format dict representing ``xdl_step``.
+    """
+    xdl_step_properties = {
+        k: format_property(
+            k,
+            v,
+            xdl_step.PROP_TYPES[k],
+            xdl_step.PROP_LIMITS.get(k, None),
+            human_readable=False,
+        )
+        for k, v in xdl_step.properties.items()
+        if (k != "children" and (full_properties or k not in xdl_step.INTERNAL_PROPS))
+    }
+    # children are uninstanstiated Steps, .steps are instantiated
+    children = xdl_step.steps if "children" in xdl_step.properties else []
+    xdl_step_json = {
+        "name": xdl_step.name,
+        "properties": xdl_step_properties,
+        "children": [xdl_step_to_json(child) for child in children],
+        "uuid": xdl_step.uuid,
+    }
+    return xdl_step_json
+
+
+def xdl_element_to_json(
+    xdl_step: Union[Reagent, Component, Parameter],
+) -> Dict[str, Any]:
+    """Convert XDL element to JSON format immediately useable by ChemIDE.
+
+    Args:
+        xdl_element (Union[Reagent, Component]): XDL element to convert to XDL
+            JSON format.
+        full_properties (bool): If ``True`` include all properties regardless of
+            whether they are internal properties or the same as the default
+            properties.
+
+    Returns:
+        Dict[str, Any]: XDL JSON format dict representing ``xdl_step``.
+    """
+    xdl_step_properties = {k: v for k, v in xdl_step.properties.items()}
+    if type(xdl_step) == Reagent:
+        name = xdl_step.name
+    elif type(xdl_step) in [Component, Parameter]:
+        name = xdl_step.id
+    xdl_step_json = {
+        "name": name,
+        "properties": xdl_step_properties,
+    }
+    return xdl_step_json

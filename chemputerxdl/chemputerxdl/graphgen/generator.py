@@ -4,6 +4,7 @@
     :synopsis: Generates a graph object from a graph file
 
 """
+
 # Std
 from typing import Dict, List
 import json
@@ -26,7 +27,7 @@ from .constants import (
     SWITCH_TO_IN_EDGE,
     SWITCH_TO_OUT_EDGE,
     ADD_CHILLER_TO_REACTOR,
-    NOT_ENOUGH_SPARE_PORTS
+    NOT_ENOUGH_SPARE_PORTS,
 )
 from .issue_fixers import (
     fix_issue_remove_src_port,
@@ -36,7 +37,7 @@ from .issue_fixers import (
     fix_issue_switch_to_in_edge,
     fix_issue_switch_to_out_edge,
     fix_issue_add_chiller_to_reactor,
-    fix_issue_not_enough_spare_ports
+    fix_issue_not_enough_spare_ports,
 )
 from .check_graph_spec import check_graph_spec
 from .get_graph_spec import get_graph_spec
@@ -45,7 +46,8 @@ from .apply_graph_spec import apply_spec_to_template
 
 # Path to template graph file
 HERE = os.path.abspath(os.path.dirname(__file__))
-DEFAULT_TEMPLATE = os.path.join(HERE, 'template.json')
+# DEFAULT_TEMPLATE = os.path.join(HERE, 'template_yan.json')
+DEFAULT_TEMPLATE = os.path.join(HERE, "template.json")
 
 # Issues that can be addressed
 FIXABLE_ISSUES = {
@@ -56,15 +58,16 @@ FIXABLE_ISSUES = {
     SWITCH_TO_IN_EDGE: fix_issue_switch_to_in_edge,
     SWITCH_TO_OUT_EDGE: fix_issue_switch_to_out_edge,
     ADD_CHILLER_TO_REACTOR: fix_issue_add_chiller_to_reactor,
-    NOT_ENOUGH_SPARE_PORTS: fix_issue_not_enough_spare_ports
+    NOT_ENOUGH_SPARE_PORTS: fix_issue_not_enough_spare_ports,
 }
+
 
 def graph_from_template(
     xdl_obj,
     template: str = None,
     save: str = None,
     auto_fix_issues: bool = False,
-    ignore_errors: List = []
+    ignore_errors: List = [],
 ) -> Dict:
     """Generates a NetworkX graph object from a given template file.
 
@@ -99,14 +102,16 @@ def graph_from_template(
     fixable_issues, errors = check_graph_spec(graph_spec, graph)
 
     # Find errors that aren't meant  o be ignored
-    errors = [error for error in errors if error['error'] not in ignore_errors]
+    errors = [error for error in errors if error["error"] not in ignore_errors]
 
     # Raise any unrecoverable errors
     if errors:
-        error_str = '\n  -- '.join([error['msg'] for error in errors])
-        error_str = '  -- ' + error_str
-        raise XDLError(f'Graph template supplied cannot be used for this\
- procedure. Errors:\n{error_str}')
+        error_str = "\n  -- ".join([error["msg"] for error in errors])
+        error_str = "  -- " + error_str
+        raise XDLError(
+            f"Graph template supplied cannot be used for this\
+ procedure. Errors:\n{error_str}"
+        )
 
     # Attempt to fix any issues that can be fixed
     if fixable_issues:
@@ -115,25 +120,27 @@ def graph_from_template(
             # Iterate through all issues
             for issue in fixable_issues:
                 # Check the issue can actually be fixed
-                assert issue['issue'] in FIXABLE_ISSUES
+                assert issue["issue"] in FIXABLE_ISSUES
 
                 # Promt user to fix the issue automatically
                 question = f'{issue["msg"]}. Fix automatically? [Y/n]'
                 answer = input(question)
-                while answer not in ['y', 'Y', 'n', 'N', '']:
+                while answer not in ["y", "Y", "n", "N", ""]:
                     answer = input(question)
-                if not answer or answer in ['y', 'Y']:
+                if not answer or answer in ["y", "Y"]:
                     continue
 
                 # Raise error if unfixed
-                elif answer in ['n', 'N']:
-                    raise XDLError(f'Graph template supplied cannot be used for\
- this procedure. Issue: {issue["msg"]}')
+                elif answer in ["n", "N"]:
+                    raise XDLError(
+                        f'Graph template supplied cannot be used for\
+ this procedure. Issue: {issue["msg"]}'
+                    )
 
         # Fix the issue
         for issue in fixable_issues:
             logger.info(f'Fixing issue: {issue["msg"]}')
-            FIXABLE_ISSUES[issue['issue']](graph, issue)
+            FIXABLE_ISSUES[issue["issue"]](graph, issue)
 
     # Apply the new graph spec to the template
     apply_spec_to_template(xdl_obj, graph_spec, graph, fixable_issues)
@@ -142,10 +149,10 @@ def graph_from_template(
     if save:
         # Convert ports to strings
         for _, _, data in graph.edges(data=True):
-            src_port, dest_port = data['port']
-            data['port'] = f'({src_port},{dest_port})'
+            src_port, dest_port = data["port"]
+            data["port"] = f"({src_port},{dest_port})"
         data = node_link_data(graph)
-        with open(save, 'w') as fd:
+        with open(save, "w") as fd:
             json.dump(data, fd, indent=2)
 
     # Return loaded graph object

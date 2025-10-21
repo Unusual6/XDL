@@ -1,0 +1,9 @@
+vessel="reactor"               #可修改
+id=123                         #不可修改
+role=reagent                   #可修改
+reagent="glacial acetic acid"  #可修改
+volume="15 mL"                 #可修改
+speed="40.0"                   #可修改
+stir="True"                    #可修改
+solid="False"                  #可修改
+comment="xxx"                  #可修改

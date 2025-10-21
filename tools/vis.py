@@ -1,89 +1,155 @@
-import networkx as nx
-from networkx.readwrite import json_graph
-from pyvis.network import Network
 import json
+import matplotlib.pyplot as plt
+import networkx as nx
 
-# 1. 加载图数据（同上）
-with open("a.json", "r") as f:
-    json_data = json.load(f)
-graph = json_graph.node_link_graph(json_data, directed=True, multigraph=True)
+# ========== Step 1: 加载你的 JSON ==========
+src = "chem_yan.json"
 
-# 2. 初始化 Pyvis 网络（设置尺寸、标题）
-net = Network(
-    height="800px", width="100%",
-    directed=True,  # 有向图需开启
-    notebook=False,  # 本地运行设为 False，Jupyter 中设为 True
-    cdn_resources="remote",  # 加载远程资源（避免本地依赖）
-    heading="Chemputer Hardware Graph (Interactive)" 
+# --------------------------
+# 1. 数据加载与关键信息提取
+# --------------------------
+with open(src, "r") as f:
+    data = json.load(f)
+
+# data = {
+#     "directed": True,
+#     "multigraph": True,
+#     # 这里粘贴你的完整 JSON 数据 ↓↓↓
+#     "nodes": [...],  # ← 替换成你的完整 nodes 数组
+#     "links": [...]   # ← 替换成你的完整 links 数组
+# }
+
+# ========== Step 2: 构建图结构 ==========
+G = nx.MultiDiGraph()
+
+# 添加节点
+for node in data["nodes"]:
+    G.add_node(
+        node["id"],
+        pos=(node["x"], node["y"]),
+        type=node["type"],
+        label=node.get("label", node["id"]),
+    )
+
+# 添加边
+for link in data["links"]:
+    G.add_edge(link["source"], link["target"])
+
+# ========== Step 3: 提取布局坐标 ==========
+# 添加节点
+for node in data["nodes"]:
+    x = node.get("x", 0)
+    y = node.get("y", 0)
+    G.add_node(
+        node["id"],
+        pos=(float(x), float(y)),  # 强制转为 float
+        type=node.get("type", "unknown"),
+        label=node.get("label", node["id"]),
+    )
+import math
+import math
+import matplotlib.pyplot as plt
+import networkx as nx
+
+# ========== Step X: 自定义以 reactor 为中心的紧凑布局 ==========
+reactors = [n for n in G.nodes if G.nodes[n].get("type") == "reactor"]
+center = reactors[0] if reactors else list(G.nodes)[0]
+
+pos = {}
+pos[center] = (0, 0)
+
+valves = [n for n in G.nodes if G.nodes[n].get("type") == "valve"]
+
+# ---- 层级半径设置（紧凑比例） ----
+R_valve = 5  # reactor 到 valve 距离
+R_local = 1.8  # valve 簇内部节点距离
+R_outer = R_valve + 3  # 孤立节点外圈
+
+# ---- valve 排布在中心周围 ----
+for i, v in enumerate(valves):
+    angle = 2 * math.pi * i / len(valves)
+    pos[v] = (R_valve * math.cos(angle), R_valve * math.sin(angle))
+
+# ---- valve 的邻居围绕局部环 ----
+for v in valves:
+    neighbors = list(G.neighbors(v)) + [u for u in G.predecessors(v)]
+    neighbors = list(set(neighbors) - {v, center})
+    for j, n in enumerate(neighbors):
+        if n not in pos:
+            angle = 2 * math.pi * j / max(len(neighbors), 1)
+            pos[n] = (
+                pos[v][0] + R_local * math.cos(angle),
+                pos[v][1] + R_local * math.sin(angle),
+            )
+
+# ---- 未放置节点（外圈） ----
+unplaced = [n for n in G.nodes if n not in pos]
+for i, n in enumerate(unplaced):
+    angle = 2 * math.pi * i / max(len(unplaced), 1)
+    pos[n] = (R_outer * math.cos(angle), R_outer * math.sin(angle))
+
+print(f"✅ 紧凑布局完成，共 {len(pos)} 个节点。")
+
+# ========== Step Y: 绘制（放大比例 + 优化外观） ==========
+plt.figure(figsize=(10, 8))
+plt.axis("off")
+
+# ---- 放大节点尺寸比例 ----
+node_types = {
+    "reactor": {"color": "#ff7f0e", "shape": "o", "size": 2500},
+    "valve": {"color": "#1f77b4", "shape": "s", "size": 1600},
+    "pump": {"color": "#2ca02c", "shape": "D", "size": 1500},
+    "flask": {"color": "#9467bd", "shape": "o", "size": 1300},
+    "waste": {"color": "#d62728", "shape": "^", "size": 1400},
+    "heater": {"color": "#8c564b", "shape": "p", "size": 1500},
+    "vacuum": {"color": "#17becf", "shape": "h", "size": 1500},
+}
+
+# ---- 绘制节点 ----
+for t, style in node_types.items():
+    nodelist = [n for n in G.nodes if G.nodes[n].get("type") == t]
+    if nodelist:
+        nx.draw_networkx_nodes(
+            G,
+            pos,
+            nodelist=nodelist,
+            node_color=style["color"],
+            node_shape=style["shape"],
+            node_size=style["size"],
+            alpha=0.9,
+            label=t,
+        )
+
+# ---- 绘制边 ----
+nx.draw_networkx_edges(
+    G,
+    pos,
+    arrows=True,
+    arrowstyle="-|>",
+    arrowsize=18,
+    width=2,
+    edge_color="gray",
+    alpha=0.7,
 )
-# net.set_title("Chemputer Hardware Graph (Interactive)")
 
-# 3. 添加节点（含属性信息，点击节点可查看）
-for node in graph.nodes:
-    # 提取节点属性（如类型、体积、当前状态）
-    node_attrs = graph.nodes[node]
-    # 节点标签：显示节点 ID，悬停显示属性
-    label = f"{node}\nType: {node_attrs.get('type', 'N/A')}"
-    # 添加节点（自定义颜色、大小）
-    net.add_node(
-        n_id=node,  # ✅ 正确：必填参数 n_id（节点唯一标识）
-        label=label,
-        size=15 if node_attrs.get("type") == "valve" else 25,
-        color=node_attrs.get("color", "#FF6B6B")
-    )
-
-# 4. 添加边（含端口等属性）
-for u, v, edge_data in graph.edges(data=True):
-    # 边标签：显示端口信息（如 "(out_main, in_1)"）
-    edge_label = edge_data.get("port", "N/A")
-    net.add_edge(
-        source=u,  # 起点
-        to=v,      # 终点
-        label=edge_label,
-        arrowStrikethrough=False  # 箭头不穿过标签
-    )
-
-# 5. 配置布局（Pyvis 自动优化，可手动调整）
-net.barnes_hut()  # 力导向布局，适合大规模图
-# （可选）添加图例（需手动定义）
-# net.add_legend(
-#     legend_items=[
-#         {"label": "Reactor", "color": "#FF6B6B"},
-#         {"label": "Pump", "color": "#4ECDC4"},
-#         {"label": "Valve", "color": "#45B7D1"}
-#     ]
-# )
-
-legend_nodes = [
-    {"id": "legend_reactor", "label": "Reactor", "color": "#FF6B6B"},
-    {"id": "legend_pump", "label": "Pump", "color": "#4ECDC4"},
-    {"id": "legend_valve", "label": "Valve", "color": "#45B7D1"}
-]
-
-# 添加图例节点（位置固定在右下角）
-for idx, item in enumerate(legend_nodes):
-    net.add_node(
-        n_id=item["id"],
-        label=item["label"],
-        color=item["color"],
-        size=20,
-        x=900 + idx * 100,  # 固定X坐标（靠右）
-        y=500,  # 固定Y坐标（靠下）
-        physics=False  # 关闭物理引擎，避免被其他节点带动
-    )
-
-# 添加图例标题
-net.add_node(
-    n_id="legend_title",
-    label="图例",
-    color="black",
-    size=25,
-    x=850,
-    y=450,
-    physics=False
+# ---- 绘制标签 ----
+nx.draw_networkx_labels(
+    G,
+    pos,
+    labels={n: G.nodes[n].get("label", n) for n in G.nodes},
+    font_size=9,
+    font_color="black",
 )
 
+# ---- 背景圈（可选） ----
+circle = plt.Circle(
+    (0, 0), R_valve + 1, color="lightgray", fill=False, linestyle="--", alpha=0.3
+)
+plt.gca().add_artist(circle)
 
-# 6. 生成 HTML 文件并打开
-net.write_html("graph_interactive.html")
-print("Interactive graph saved to graph_interactive.html")
+plt.legend(fontsize=8, loc="upper right")
+plt.tight_layout()
+plt.savefig("graph_t.png", dpi=400, bbox_inches="tight")
+# plt.show()
+
+print("✅ 拓扑图已保存为 graph_1.png")

@@ -12,40 +12,39 @@ from networkx import MultiDiGraph
 # XDL
 from xdl.xdl.execution.abstract_executor import AbstractXDLExecutor
 from xdl.xdl.utils.graph import get_graph
-from xdl.xdl.steps import (
-    AbstractDynamicStep,
-    Step,
-    NON_RECURSIVE_ABSTRACT_STEPS
-)
+from xdl.xdl.steps import AbstractDynamicStep, Step, NON_RECURSIVE_ABSTRACT_STEPS
 from xdl.xdl.readwrite import xdl_to_xml_string
 
 # Relative
 from .hardware_mapping import (
-    check_hardware_compatibility, get_hardware_map, map_hardware_to_steps)
+    check_hardware_compatibility,
+    get_hardware_map,
+    map_hardware_to_steps,
+)
 from .implied_steps import (
     set_all_stir_speeds,
     add_reagent_last_minute_addition_steps,
     add_reagent_storage_steps,
-    add_in_final_shutdown
+    add_in_final_shutdown,
 )
 from .implied_properties import (
-    add_all_volumes, add_filter_volumes, add_clean_vessel_temps)
+    add_all_volumes,
+    add_filter_volumes,
+    add_clean_vessel_temps,
+)
 from .filter_dead_volume import (
     confirm_dead_volume_handling_behaviour,
     confirm_dead_volume_solvents,
     add_implied_add_dead_volume_steps,
     add_implied_remove_dead_volume_steps,
-    add_filter_inert_gas_connect_steps
+    add_filter_inert_gas_connect_steps,
 )
 from .optimize import (
     remove_pointless_dry_return_to_rt,
     optimize_separation_steps,
-    tidy_up_procedure
+    tidy_up_procedure,
 )
-from .graph import (
-    hardware_from_graph,
-    graph_hash
-)
+from .graph import hardware_from_graph, graph_hash
 from .utils import add_default_ports_to_step
 from .cleaning import (
     add_cleaning_steps,
@@ -63,6 +62,7 @@ from ..steps import CleanBackbone
 from ..utils.execution import (
     get_chempiler,
 )
+
 
 class ChemputerExecutor(AbstractXDLExecutor):
 
@@ -84,9 +84,7 @@ class ChemputerExecutor(AbstractXDLExecutor):
             graph = self._graph
         return graph_hash(graph)
 
-    def add_internal_properties(
-        self, graph: MultiDiGraph, steps: List[Step]
-    ) -> None:
+    def add_internal_properties(self, graph: MultiDiGraph, steps: List[Step]) -> None:
         """Recursively add internal properties to all steps and substeps in
         given list of steps. This is used instead of AbstractXDLExecutor method
         as default ports need to be added just before internal properties.
@@ -110,7 +108,7 @@ class ChemputerExecutor(AbstractXDLExecutor):
                 step.prepare_for_execution(graph, self)
 
             # If the step has children, add internal properties to all children
-            if 'children' in step.properties:
+            if "children" in step.properties:
                 self.add_internal_properties(graph, step.children)
 
             # Recursive steps, add internal proerties to all substeps
@@ -139,13 +137,10 @@ class ChemputerExecutor(AbstractXDLExecutor):
             # Check there are cleaning solvents available
             cleaning_solvents = get_cleaning_schedule(self._xdl)
             if cleaning_solvents[0] is None:
-                raise XDLNoSolventsError(
-                    'No solvents found in graph for cleaning'
-                )
+                raise XDLNoSolventsError("No solvents found in graph for cleaning")
 
             # Add steps for cleaning vessels
-            add_vessel_cleaning_steps(
-                self._xdl, self._graph_hardware, interactive)
+            add_vessel_cleaning_steps(self._xdl, self._graph_hardware, interactive)
             self.add_internal_properties(self._graph, self._xdl.steps)
 
             # Add steps to clean the backbone of the Chemputer
@@ -156,29 +151,28 @@ class ChemputerExecutor(AbstractXDLExecutor):
             if interactive:
                 # Ask the user to verify solvents used in cleaning
                 verify = None
-                while verify not in ['y', 'n', '']:
+                while verify not in ["y", "n", ""]:
                     verify = input(
-                        'Verify solvents used in backbone and vessel \
-    cleaning? (y, [n])\n')
+                        "Verify solvents used in backbone and vessel \
+    cleaning? (y, [n])\n"
+                    )
 
                 # Verify the cleaning steps
-                if verify == 'y':
+                if verify == "y":
                     verify_cleaning_steps(self._xdl)
 
         # Add steps for dealing with reagent storage
-        add_reagent_storage_steps(
-            self._graph, self._xdl.steps, self._xdl.reagents)
+        add_reagent_storage_steps(self._graph, self._xdl.steps, self._xdl.reagents)
 
         # Add steps for adding reagents at the last minute
         add_reagent_last_minute_addition_steps(
-            self._graph, self._xdl.steps, self._xdl.reagents)
+            self._graph, self._xdl.steps, self._xdl.reagents
+        )
 
         # Set stir speeds of stirrers to default at start of procedure
         set_all_stir_speeds(self._xdl.steps)
 
-    def _add_filter_dead_volume_handling_steps(
-        self, interactive: bool = True
-    ) -> None:
+    def _add_filter_dead_volume_handling_steps(self, interactive: bool = True) -> None:
         """Add steps to handle the filter dead volume. This can be handled in
         two ways determined by the XDL object's filter_dead_volume_method
         attribute (default is 'solvent', alternative is 'inert_gas').
@@ -199,19 +193,16 @@ class ChemputerExecutor(AbstractXDLExecutor):
 
         # Ask the user to confirm actions for ahndling dead volumes
         if interactive:
-            self._filter_dead_volume_method =\
-                confirm_dead_volume_handling_behaviour(
-                    self._filter_dead_volume_method)
+            self._filter_dead_volume_method = confirm_dead_volume_handling_behaviour(
+                self._filter_dead_volume_method
+            )
 
         # Add Filter step using Inert Gas
-        if (self._filter_dead_volume_method
-                == FILTER_DEAD_VOLUME_INERT_GAS_METHOD):
+        if self._filter_dead_volume_method == FILTER_DEAD_VOLUME_INERT_GAS_METHOD:
             add_filter_inert_gas_connect_steps(self._graph, self._xdl.steps)
 
         # Add Filter step using solvent
-        elif (
-            self._filter_dead_volume_method == FILTER_DEAD_VOLUME_LIQUID_METHOD
-        ):
+        elif self._filter_dead_volume_method == FILTER_DEAD_VOLUME_LIQUID_METHOD:
             self._add_filter_liquid_dead_volume_steps()
 
             # Ask the user to confirm solvent choice
@@ -225,13 +216,13 @@ class ChemputerExecutor(AbstractXDLExecutor):
         """
 
         # Add steps using solvent to clear dead volume
-        add_implied_add_dead_volume_steps(
-            self._graph, self._graph_hardware, self._xdl)
+        add_implied_add_dead_volume_steps(self._graph, self._graph_hardware, self._xdl)
         self.add_internal_properties(self._graph, self._xdl.steps)
 
         # Add steps to remove the dead volume
         add_implied_remove_dead_volume_steps(
-            self._graph, self._graph_hardware, self._xdl)
+            self._graph, self._graph_hardware, self._xdl
+        )
         self.add_internal_properties(self._graph, self._xdl.steps)
 
     ##################
@@ -282,10 +273,10 @@ class ChemputerExecutor(AbstractXDLExecutor):
         self,
         graph_file: Union[str, Dict],
         interactive: bool = True,
-        save_path: str = '',
+        save_path: str = "",
         sanity_check: bool = True,
-        auto_clean: bool = True,
-        filter_dead_volume_method: str = 'solvent',
+        auto_clean: bool = False,
+        filter_dead_volume_method: str = "solvent",
         filter_dead_volume_solvent: str = None,
         organic_cleaning_solvent: str = None,
         hardware_map: List[Dict] = None,
@@ -348,26 +339,23 @@ class ChemputerExecutor(AbstractXDLExecutor):
             full_procedure=full_procedure,
         )
         self.optimize_and_compile(
-            graph_file,
-            save_path,
-            sanity_check,
-            device_modules=device_modules
+            graph_file, save_path, sanity_check, device_modules=device_modules
         )
 
     def add_process_steps(
         self,
         graph_file: Union[str, Dict],
         interactive: bool = True,
-        save_path: str = '',
+        save_path: str = "",
         sanity_check: bool = True,
         auto_clean: bool = True,
-        filter_dead_volume_method: str = 'solvent',
+        filter_dead_volume_method: str = "solvent",
         filter_dead_volume_solvent: str = None,
         organic_cleaning_solvent: str = None,
         hardware_map: List[Dict] = None,
         testing: bool = False,
         device_modules=[],
-        full_procedure: bool = True
+        full_procedure: bool = True,
     ) -> None:
         """Prepare the XDL for execution on a Chemputer corresponding to the
         given graph.
@@ -433,8 +421,7 @@ class ChemputerExecutor(AbstractXDLExecutor):
             self._graph_hardware = hardware_from_graph(self._graph)
 
             # Check hardware compatibility
-            check_hardware_compatibility(
-                self._xdl.hardware, self._graph_hardware)
+            check_hardware_compatibility(self._xdl.hardware, self._graph_hardware)
 
             # Map graph hardware to steps.
             # _map_hardware_to_steps is called twice so that
@@ -444,7 +431,8 @@ class ChemputerExecutor(AbstractXDLExecutor):
             # generated map. Specific maps are used in parallelisation.
             if not hardware_map:
                 hardware_map = get_hardware_map(
-                    self._xdl.hardware, self._graph_hardware)
+                    self._xdl.hardware, self._graph_hardware
+                )
 
             map_hardware_to_steps(self._graph, self._xdl.steps, hardware_map)
 
@@ -507,7 +495,7 @@ class ChemputerExecutor(AbstractXDLExecutor):
     def optimize_and_compile(
         self,
         graph_file: Union[str, Dict],
-        save_path: str = '',
+        save_path: str = "",
         sanity_check: bool = True,
         device_modules=[],
     ):
@@ -538,8 +526,7 @@ class ChemputerExecutor(AbstractXDLExecutor):
         # high level steps that have not been compiled, so these properties
         # could be added in add_process_steps.
         add_all_volumes(self._graph, self._graph_hardware, self._xdl.steps)
-        add_filter_volumes(
-            self._graph, self._graph_hardware, self._xdl.steps)
+        add_filter_volumes(self._graph, self._graph_hardware, self._xdl.steps)
 
         # The updates to volume properties in add_all_volumes and
         # add_filter_volumes means that steps lists may have been regenerated
@@ -552,10 +539,7 @@ class ChemputerExecutor(AbstractXDLExecutor):
 
         # Optimise procedure.
         tidy_up_procedure(
-            self._graph,
-            self._graph_hardware,
-            self._chempiler,
-            self._xdl.steps
+            self._graph, self._graph_hardware, self._chempiler, self._xdl.steps
         )
 
         # Prepared for execution now
@@ -566,12 +550,12 @@ class ChemputerExecutor(AbstractXDLExecutor):
         # This results in a double save when this is called from
         # XDL.prepare_for_execution but that doesn't really matter.
         if save_path:
-            with open(save_path, 'w') as fd:
+            with open(save_path, "w") as fd:
                 fd.write(
                     xdl_to_xml_string(
                         self._xdl,
                         graph_hash=self._graph_hash(),
                         full_properties=True,
-                        full_tree=True
+                        full_tree=True,
                     )
                 )

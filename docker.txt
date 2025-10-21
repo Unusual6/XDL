@@ -12,5 +12,9 @@ docker rmi -f $(docker images -aq)
 下拉
 docker pull crpi-ozc90smm2waxngse.cn-hangzhou.personal.cr.aliyuncs.com/xdl_jpf/xdl_v1:v3
 
+启动
+sudo dockerd
 
 docker images
+
+sudo docker run --rm -it --name xdl_v3_container --entrypoint /bin/bash crpi-ozc90smm2waxngse.cn-hangzhou.personal.cr.aliyuncs.com/xdl_jpf/xdl_v1:v3

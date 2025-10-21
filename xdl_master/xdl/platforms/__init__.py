@@ -1,0 +1,2 @@
+from xdl_master.xdl.platforms.abstract_platform import AbstractPlatform
+from xdl_master.xdl.platforms.placeholder import PlaceholderPlatform

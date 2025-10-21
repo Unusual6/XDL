@@ -139,3 +139,494 @@
 2025-09-30 11:56:03,056 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
 2025-09-30 11:56:03,057 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_Z (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
 2025-09-30 11:56:03,057 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-10-09 13:57:53,625 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:57:53,627 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-10-09 13:57:55,354 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:57:55,354 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-10-09 13:57:56,853 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:57:58,022 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:57:58,022 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:02,930 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:02,931 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-10-09 13:58:03,301 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_2,6-Dimethylaniline (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:03,302 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_2,6-Dimethylaniline -3.0 mL. Setting to 0.
+2025-10-09 13:58:06,966 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:06,972 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:06,972 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:07,938 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_chloroacetyl chloride (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:07,939 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -3.0 mL. Setting to 0.
+2025-10-09 13:58:07,943 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_chloroacetyl chloride (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:07,943 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_chloroacetyl chloride -2.0 mL. Setting to 0.
+2025-10-09 13:58:07,944 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:07,946 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:07,946 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:10,370 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_glacial acetic acid (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:10,370 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -3.0 mL. Setting to 0.
+2025-10-09 13:58:10,373 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_glacial acetic acid (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:10,374 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_glacial acetic acid -15.0 mL. Setting to 0.
+2025-10-09 13:58:10,375 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:10,379 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:10,380 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:10,383 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_half-saturated aqueous sodium acetate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:10,384 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -3.0 mL. Setting to 0.
+2025-10-09 13:58:10,387 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_half-saturated aqueous sodium acetate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:10,387 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_half-saturated aqueous sodium acetate -25.0 mL. Setting to 0.
+2025-10-09 13:58:10,388 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:10,390 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:10,391 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:35,465 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,466 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-09 13:58:35,469 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,470 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-09 13:58:35,471 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:35,473 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,473 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:35,479 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,480 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-09 13:58:35,483 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,484 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-09 13:58:35,485 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:35,489 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,490 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:35,493 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,494 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-09 13:58:35,498 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,499 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-09 13:58:35,499 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:35,502 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,503 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:35,507 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,507 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-09 13:58:35,509 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,510 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-09 13:58:35,510 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 13:58:35,515 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 13:58:35,515 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 13:58:35,520 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 14:01:04,825 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,825 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-09 14:01:04,826 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,826 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-09 14:01:04,826 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 14:01:04,827 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,827 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 14:01:04,828 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,828 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-09 14:01:04,829 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,829 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-09 14:01:04,829 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 14:01:04,830 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,830 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 14:01:04,831 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,832 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-09 14:01:04,832 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,833 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-09 14:01:04,834 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 14:01:04,837 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,837 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 14:01:04,840 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,842 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-09 14:01:04,843 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,843 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-09 14:01:04,844 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-09 14:01:04,845 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-09 14:01:04,846 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-09 14:01:04,847 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-10 09:50:54,463 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,465 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-10 09:50:54,465 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,465 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-10 09:50:54,466 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-10 09:50:54,466 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,466 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-10 09:50:54,467 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,468 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-10 09:50:54,468 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,469 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-10 09:50:54,469 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-10 09:50:54,470 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,470 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-10 09:50:54,472 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,472 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-10 09:50:54,473 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,474 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-10 09:50:54,474 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-10 09:50:54,475 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,475 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-10 09:50:54,476 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,476 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-10 09:50:54,477 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,477 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-10 09:50:54,478 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-10 09:50:54,478 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-10 09:50:54,479 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-10 09:50:54,480 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-20 15:26:58,345 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,347 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-20 15:26:58,348 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,348 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-20 15:26:58,348 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-20 15:26:58,350 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,350 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-20 15:26:58,352 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,353 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-20 15:26:58,354 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,354 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-20 15:26:58,355 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-20 15:26:58,356 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,357 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-20 15:26:58,358 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,359 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-20 15:26:58,360 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,360 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-20 15:26:58,361 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-20 15:26:58,363 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,363 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-20 15:26:58,365 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,365 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-20 15:26:58,366 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,367 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-20 15:26:58,367 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-20 15:26:58,368 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-20 15:26:58,369 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-20 15:26:58,371 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:28:56,232 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,233 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 09:28:56,234 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,234 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-21 09:28:56,234 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:28:56,235 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,235 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:28:56,236 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,236 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 09:28:56,236 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,237 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 09:28:56,237 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:28:56,238 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,238 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:28:56,240 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,240 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 09:28:56,241 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,242 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 09:28:56,242 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:28:56,243 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,243 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:28:56,244 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,245 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 09:28:56,245 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,246 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 09:28:56,246 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:28:56,247 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:28:56,247 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:28:56,248 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:48:18,688 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,691 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 09:48:18,696 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,697 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-21 09:48:18,700 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:48:18,704 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,705 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:48:18,713 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,714 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 09:48:18,717 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,718 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 09:48:18,719 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:48:18,724 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,725 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:48:18,733 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,734 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 09:48:18,737 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,737 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 09:48:18,738 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:48:18,745 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,746 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:48:18,750 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,751 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 09:48:18,754 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,754 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 09:48:18,755 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 09:48:18,761 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 09:48:18,762 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 09:48:18,765 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:50:58,009 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,012 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 10:50:58,016 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,016 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 10:50:58,017 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:50:58,021 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,021 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 10:50:58,025 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,026 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 10:50:58,031 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,032 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 10:50:58,032 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:50:58,035 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,036 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 10:50:58,040 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,041 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 10:50:58,043 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,044 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 10:50:58,045 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:50:58,050 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,050 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 10:50:58,055 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,056 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 10:50:58,059 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,060 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 10:50:58,061 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:50:58,065 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:50:58,065 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 10:52:19,053 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,054 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 10:52:19,057 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,058 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 10:52:19,059 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:52:19,063 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,063 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 10:52:19,067 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,067 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 10:52:19,069 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,070 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 10:52:19,070 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:52:19,073 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,075 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 10:52:19,081 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,082 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 10:52:19,085 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,085 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 10:52:19,086 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:52:19,088 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,089 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 10:52:19,094 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,095 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 10:52:19,098 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,098 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 10:52:19,099 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 10:52:19,101 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 10:52:19,101 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:16:02,658 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,660 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:16:02,663 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,663 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 11:16:02,664 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:16:02,670 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,672 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:16:02,680 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,681 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:16:02,684 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,686 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:16:02,687 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:16:02,693 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,693 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:16:02,698 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,698 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:16:02,701 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,702 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 11:16:02,706 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:16:02,712 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,713 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:16:02,716 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,717 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 11:16:02,720 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,721 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 11:16:02,722 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:16:02,728 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:16:02,729 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:13,448 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,449 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:17:13,451 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,452 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 11:17:13,454 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:13,458 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,459 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:13,464 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,467 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:17:13,471 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,471 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:17:13,472 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:13,474 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,475 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:13,478 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,479 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:17:13,485 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,486 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 11:17:13,486 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:13,489 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,490 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:13,492 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,492 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 11:17:13,495 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,496 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 11:17:13,497 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:13,502 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:13,502 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:56,776 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,777 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:17:56,781 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,782 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 11:17:56,783 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:56,789 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,789 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:56,794 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,795 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:17:56,802 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,803 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:17:56,805 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:56,808 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,809 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:56,816 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,818 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:17:56,822 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,822 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 11:17:56,823 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:56,827 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,828 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:17:56,833 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,833 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 11:17:56,836 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,837 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 11:17:56,838 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:17:56,842 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:17:56,843 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:30:33,904 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,906 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:30:33,908 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,909 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 11:30:33,909 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:30:33,911 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,911 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:30:33,915 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,916 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:30:33,920 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,921 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:30:33,922 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:30:33,926 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,926 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:30:33,931 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,932 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:30:33,936 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,936 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 11:30:33,937 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:30:33,941 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,942 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:30:33,946 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,946 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 11:30:33,948 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,948 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 11:30:33,949 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:30:33,952 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:30:33,953 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:01,146 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,148 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:31:01,152 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,154 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-21 11:31:01,156 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:01,160 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,161 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:01,165 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,166 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:31:01,170 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,171 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:31:01,172 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:01,177 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,177 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:01,184 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,185 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:31:01,187 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,188 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 11:31:01,188 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:01,191 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,192 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:01,197 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,198 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 11:31:01,200 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,201 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 11:31:01,202 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:01,204 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:01,205 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:01,210 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:55,538 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,539 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:31:55,539 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,539 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -15.0 mL. Setting to 0.
+2025-10-21 11:31:55,540 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:55,540 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,541 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:55,544 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,544 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:31:55,545 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,546 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 11:31:55,547 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:55,549 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,549 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:55,551 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,552 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 11:31:55,553 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,553 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 11:31:55,554 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:55,555 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,555 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:55,560 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,560 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 11:31:55,562 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,562 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 11:31:55,563 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 11:31:55,564 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 11:31:55,564 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 11:31:55,566 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:02:19,917 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,918 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 16:02:19,919 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,919 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 16:02:19,920 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:02:19,921 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,921 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 16:02:19,922 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,923 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 16:02:19,924 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,924 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 16:02:19,925 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:02:19,927 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,929 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 16:02:19,932 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,932 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 16:02:19,934 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,934 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 16:02:19,935 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:02:19,936 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,936 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 16:02:19,937 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,938 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 16:02:19,939 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,940 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 16:02:19,941 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:02:19,943 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:02:19,943 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 16:34:08,097 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_ZrOCl2 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,098 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -3.0 mL. Setting to 0.
+2025-10-21 16:34:08,098 ; INFO ; pump_execution ; MainThread ; Moving 15.0 mL from flask_ZrOCl2 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,099 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_ZrOCl2 -15.0 mL. Setting to 0.
+2025-10-21 16:34:08,099 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:34:08,099 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,100 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 16:34:08,100 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,100 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 16:34:08,101 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Y(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,101 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Y(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 16:34:08,101 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:34:08,102 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,102 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 16:34:08,104 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_AI(NO3)3 (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,104 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -3.0 mL. Setting to 0.
+2025-10-21 16:34:08,105 ; INFO ; pump_execution ; MainThread ; Moving 2.0 mL from flask_AI(NO3)3 (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,105 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_AI(NO3)3 -2.0 mL. Setting to 0.
+2025-10-21 16:34:08,106 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:34:08,107 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,107 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.
+2025-10-21 16:34:08,109 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NHз·H2O (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,110 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -3.0 mL. Setting to 0.
+2025-10-21 16:34:08,111 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,112 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
+2025-10-21 16:34:08,112 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-10-21 16:34:08,114 ; INFO ; pump_execution ; MainThread ; Moving 5.0 mL from flask_nitrogen (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-10-21 16:34:08,114 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_nitrogen -5.0 mL. Setting to 0.

@@ -1,0 +1,77 @@
+<?xdl version="2.0.0" ?>
+<XDL>
+
+<Synthesis
+  graph_sha256="bba43d73cbc4eb89b590ea4bb9900a38b79b93c56b9387c74b72c596d5725893"
+>
+
+  <Hardware>
+    <Component
+      id="DIAD_vial"
+      type="flask"
+      chemical="DIAD" />
+    <Component
+      id="reactor"
+      type="reactor" />
+    <Component
+      id="rotavap"
+      type="rotavap" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      id="Z-Hyp-OH"
+      molecular_weight="265.26"
+      role="reagent"
+      solid="True" />
+    <Reagent
+      id="PPh3"
+      molecular_weight="262.29"
+      role="reagent"
+      solid="True" />
+    <Reagent
+      id="DIAD"
+      molecular_weight="202.21"
+      role="reagent"
+      solid="True" />
+    <Reagent
+      id="THF"
+      molecular_weight="72.11"
+      density="0.889"
+      role="solvent" />
+    <Reagent
+      id="diethyl ether"
+      molecular_weight="74.12"
+      density="0.706"
+      role="solvent" />
+    <Reagent
+      id="methanol"
+      role="solvent" />
+  </Reagents>
+
+  <Procedure>
+    <Shutdown
+      vacuums="rotavap"
+      heaters="reactor"
+      stirrers=""
+      rotavaps="rotavap"
+      chillers="">
+      <CRotavapStopRotation
+        rotavap_name="rotavap" />
+      <CRotavapStopHeater
+        rotavap_name="rotavap" />
+      <CRotavapLiftUp
+        rotavap_name="rotavap" />
+      <CStopHeat
+        vessel="reactor"
+        heater="stirrer_reactor" />
+      <CStopVacuum
+        vessel="rotavap" />
+      <CVentVacuum
+        vessel="rotavap" />
+    </Shutdown>
+  </Procedure>
+
+</Synthesis>
+
+</XDL>
