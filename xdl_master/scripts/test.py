@@ -11,44 +11,20 @@ from ChemputerConvergence.libraries.Chempiler.chempiler.chempiler import Chempil
 import ChemputerConvergence.libraries.chemputerapi.ChemputerAPI as ChemputerAPI
 
 from xdl_master.xdl import XDL
+from xdl_master.xdl.steps.core import AbstractBaseStep, Step
 
 
 # python -m xdl_master.scripts.test --step run
 
-
-# def main():
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument("xdl_file", type=str)
-#     parser.add_argument("graph_file", type=str)
-#     parser.add_argument("--interactive", action="store_true")
-#     args = parser.parse_args()
-
-#     if not os.path.exists(args.xdl_file):
-#         raise FileNotFoundError(f"Can't find xdl file '{args.xdl_file}'.")
-
-#     if not os.path.exists(args.graph_file):
-#         raise FileNotFoundError(f"Can't find graph file '{args.graph_file}'.")
-
-#     x = XDL(args.xdl_file)
-#     x.prepare_for_execution(args.graph_file, interactive=args.interactive)
-
-#     c = Chempiler(
-#         experiment_code="test",
-#         output_dir=appdirs.user_data_dir("xdl"),
-#         graph_file=args.graph_file,
-#         simulation=True,
-#         device_modules=[ChemputerAPI],
-#     )
-
-#     x.execute(c)
-
-
-# if __name__ == "__main__":
-#     main()
+# queue
+# 调用蓝图时指定的 queue 会作为蓝图内所有步骤的 “默认队列”
+# 同一队列内的步骤串行执行，不同队列的步骤并行执行。
 
 
 def main():
-    parser = argparse.ArgumentParser(description="XDL流程分步执行工具（画图/编译/执行）")
+    parser = argparse.ArgumentParser(
+        description="XDL流程分步执行工具（画图/编译/执行）"
+    )
 
     parser.add_argument(
         "--xdl_file", default="files/chem_yan.xdl", type=str, help="输入xdl"
@@ -121,7 +97,9 @@ def main():
             )
 
         # 加载XDL并执行编译
-        print(f"[第二步：编译] 从 {args.xdl_file} 编译，使用Graph文件：{args.graph_file}")
+        print(
+            f"[第二步：编译] 从 {args.xdl_file} 编译，使用Graph文件：{args.graph_file}"
+        )
         x = XDL(args.xdl_file)
         x.prepare_for_execution(
             graph_file=args.graph_file,
@@ -150,7 +128,9 @@ def main():
             simulation=True,  # 模拟模式（可根据需求调整）
             device_modules=[ChemputerAPI],
         )
+        # step = Step()
         x = XDL(args.xdl_file)
+        x.graph(save=args.graph_file)  # 生成Graph JSON并保存
 
         x.prepare_for_execution(
             graph_file=args.graph_file,

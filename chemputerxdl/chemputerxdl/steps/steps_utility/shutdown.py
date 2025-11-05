@@ -12,7 +12,7 @@ from ...constants import (
     HEATER_CLASSES,
     ROTAVAP_CLASSES,
     VACUUM_CLASSES,
-    STIRRER_CLASSES
+    STIRRER_CLASSES,
 )
 from xdl.xdl.steps import AbstractStep
 from xdl.xdl.steps.base_steps import Step
@@ -25,10 +25,11 @@ from ..steps_base import (
     CVentVacuum,
     CStopStir,
     CRotavapStopHeater,
-    CRotavapStopRotation
+    CRotavapStopRotation,
 )
 
 from xdl.xdl.utils.graph import undirected_neighbors
+
 
 class Shutdown(ChemputerStep, AbstractStep):
     """XDL step to enact a Shutdown on the platform.
@@ -38,20 +39,14 @@ class Shutdown(ChemputerStep, AbstractStep):
         AbstractStep, ChemputerStep
     """
 
-    INTERNAL_PROPS = [
-        'vacuums',
-        'heaters',
-        'stirrers',
-        'rotavaps',
-        'chillers'
-    ]
+    INTERNAL_PROPS = ["vacuums", "heaters", "stirrers", "rotavaps", "chillers"]
 
     PROP_TYPES = {
-        'vacuums': List[str],
-        'heaters': List[str],
-        'stirrers': List[str],
-        'rotavaps': List[str],
-        'chillers': List[str]
+        "vacuums": List[str],
+        "heaters": List[str],
+        "stirrers": List[str],
+        "rotavaps": List[str],
+        "chillers": List[str],
     }
 
     def __init__(
@@ -73,24 +68,13 @@ class Shutdown(ChemputerStep, AbstractStep):
             List[Step]: Rotavap shutdown steps
         """
 
-        stop_rots = [
-            CRotavapStopRotation(rot)
-            for rot in self.rotavaps
-        ]
+        stop_rots = [CRotavapStopRotation(rot) for rot in self.rotavaps]
 
-        stop_heats = [
-            CRotavapStopHeater(rot)
-            for rot in self.rotavaps
-        ]
+        stop_heats = [CRotavapStopHeater(rot) for rot in self.rotavaps]
 
-        lifts = [
-            CRotavapLiftUp(rot)
-            for rot in self.rotavaps
-        ]
+        lifts = [CRotavapLiftUp(rot) for rot in self.rotavaps]
 
-        return list(
-            chain(stop_rots, stop_heats, lifts)
-        )
+        return list(chain(stop_rots, stop_heats, lifts))
 
     def get_stirrer_steps(self) -> List[Step]:
         """Get steps to shutdown the stirrers
@@ -99,10 +83,7 @@ class Shutdown(ChemputerStep, AbstractStep):
             List[Step]: Stirrer shutdown steps
         """
 
-        return [
-            CStopStir(stir)
-            for stir in self.stirrers
-        ]
+        return [CStopStir(stir) for stir in self.stirrers]
 
     def get_heater_steps(self) -> List[Step]:
         """Get steps to shutdown the heaters
@@ -111,10 +92,7 @@ class Shutdown(ChemputerStep, AbstractStep):
             List[Step]: HEater shutdown steps
         """
 
-        return [
-            CStopHeat(heat)
-            for heat in self.heaters
-        ]
+        return [CStopHeat(heat) for heat in self.heaters]
 
     def get_vacuum_steps(self) -> List[Step]:
         """Get the steps to shutdown the vacuums
@@ -125,10 +103,7 @@ class Shutdown(ChemputerStep, AbstractStep):
 
         steps = []
         for vac in self.vacuums:
-            steps.extend([
-                CStopVacuum(vac),
-                CVentVacuum(vac)
-            ])
+            steps.extend([CStopVacuum(vac), CVentVacuum(vac)])
 
         return steps
 
@@ -139,10 +114,7 @@ class Shutdown(ChemputerStep, AbstractStep):
             List[Step]: Chiller shutdown steps
         """
 
-        return [
-            CStopChiller(chill)
-            for chill in self.chillers
-        ]
+        return [CStopChiller(chill) for chill in self.chillers]
 
     def on_prepare_for_execution(self, graph: Dict):
         """Prepares the current step for execution.
@@ -158,8 +130,11 @@ class Shutdown(ChemputerStep, AbstractStep):
         # Iterate through all nodes in the graph
         for node, data in graph.nodes(data=True):
             # Get all vessels attached to the current node
-            vessel = [i for i in undirected_neighbors(graph, node)][0]
-
+            # vessel = [i for i in undirected_neighbors(graph, node)][0]
+            vessels = []
+            for i in undirected_neighbors(graph, node):
+                vessels.append(i)
+            vessel = vessels[0]
             # Chiller vessel
             if data["class"] in CHILLER_CLASSES:
                 chillers.append(vessel)

@@ -25,6 +25,7 @@ from ..constants import DEFAULT_AIR_FLUSH_TUBE_VOLUME
 # XDL
 from xdl.xdl.utils.graph import undirected_neighbors
 
+
 def cartridge_in_pseudo_flask_name(cartridge_chemical: str) -> str:
     """Placeholder name used for pseudo flask representing the position at which
     the edge to the cartridge in port starts.
@@ -36,7 +37,8 @@ def cartridge_in_pseudo_flask_name(cartridge_chemical: str) -> str:
         str: Formatted name.
     """
 
-    return f'{cartridge_chemical}-cartridge-in'
+    return f"{cartridge_chemical}-cartridge-in"
+
 
 def cartridge_out_pseudo_flask_name(cartridge_chemical: str) -> str:
     """Placeholder name used for pseudo flask representing the position at which
@@ -49,11 +51,10 @@ def cartridge_out_pseudo_flask_name(cartridge_chemical: str) -> str:
         str: Formatted name.
     """
 
-    return f'{cartridge_chemical}-cartridge-out'
+    return f"{cartridge_chemical}-cartridge-out"
 
-def add_transfer_to_dict(
-    transfer_dict: Dict, transfer: str, volume: float
-) -> Dict:
+
+def add_transfer_to_dict(transfer_dict: Dict, transfer: str, volume: float) -> Dict:
     """Adds a transfer to Transfer colelction
 
     Args:
@@ -70,6 +71,7 @@ def add_transfer_to_dict(
         transfer_dict[transfer] = volume
 
     return transfer_dict
+
 
 def get_transfers(xdl_obj, graph, flasks, inert_gas_flask=None):
     """Get map of reagent transfer and volume of liquid transferred over whole
@@ -110,17 +112,17 @@ def get_transfers(xdl_obj, graph, flasks, inert_gas_flask=None):
                 solvent_volume = step.solvent_volume * step.n_separations
                 add_transfer_to_dict(transfers, transfer, solvent_volume)
             else:
-                volume = graph.nodes[step.separation_vessel]['max_volume'] / 3
+                volume = graph.nodes[step.separation_vessel]["max_volume"] / 3
 
             # Through cartridge transfer
             if step.through:
                 in_transfer = (
                     step.separation_vessel,
-                    cartridge_in_pseudo_flask_name(step.through)
+                    cartridge_in_pseudo_flask_name(step.through),
                 )
                 out_transfer = (
                     cartridge_out_pseudo_flask_name(step.through),
-                    step.to_vessel
+                    step.to_vessel,
                 )
                 # Use solvent volume if available, otherwise placeholder volume
                 # derived from separator max volume.
@@ -134,8 +136,7 @@ def get_transfers(xdl_obj, graph, flasks, inert_gas_flask=None):
             # Flush tubing
             if inert_gas_flask:
                 transfer = (inert_gas_flask, step.to_vessel)
-                add_transfer_to_dict(
-                    transfers, transfer, DEFAULT_AIR_FLUSH_TUBE_VOLUME)
+                add_transfer_to_dict(transfers, transfer, DEFAULT_AIR_FLUSH_TUBE_VOLUME)
 
         # Recrystallise step
         elif type(step) == Recrystallize and step.solvent:
@@ -145,14 +146,12 @@ def get_transfers(xdl_obj, graph, flasks, inert_gas_flask=None):
         # FilterThrough step
         elif type(step) == FilterThrough and step.eluting_solvent:
             # Get cartridge pseudo flask names
-            in_cartridge_pseudo_flask = cartridge_in_pseudo_flask_name(
-                step.through)
+            in_cartridge_pseudo_flask = cartridge_in_pseudo_flask_name(step.through)
 
-            out_cartridge_pseudo_flask = cartridge_out_pseudo_flask_name(
-                step.through)
+            out_cartridge_pseudo_flask = cartridge_out_pseudo_flask_name(step.through)
 
             # Volume unknown so use third of max volume, arbitrary
-            volume = graph.nodes[step.from_vessel]['max_volume'] / 3
+            volume = graph.nodes[step.from_vessel]["max_volume"] / 3
 
             # Eluting solvent to from_vessel
             transfer = (flasks[step.eluting_solvent], step.from_vessel)
@@ -168,17 +167,11 @@ def get_transfers(xdl_obj, graph, flasks, inert_gas_flask=None):
             add_transfer_to_dict(transfers, transfer, eluting_volume)
 
             # from_vessel to cartridge_in
-            transfer = (
-                step.from_vessel,
-                flasks[in_cartridge_pseudo_flask]
-            )
+            transfer = (step.from_vessel, flasks[in_cartridge_pseudo_flask])
             add_transfer_to_dict(transfers, transfer, volume)
 
             # cartridge_out to to_vessel
-            transfer = (
-                flasks[out_cartridge_pseudo_flask],
-                step.to_vessel
-            )
+            transfer = (flasks[out_cartridge_pseudo_flask], step.to_vessel)
             add_transfer_to_dict(transfers, transfer, volume)
 
         elif type(step) == FlushTubing:
@@ -188,19 +181,18 @@ def get_transfers(xdl_obj, graph, flasks, inert_gas_flask=None):
 
     return transfers
 
+
 def add_cartridges_to_flasks(flasks, cartridges):
     """Add cartridge in and out positions to flasks as pseudo flasks."""
     for cartridge in cartridges:
-        out_pseudo_flask = cartridge_out_pseudo_flask_name(
-            cartridge['chemical'])
-        in_pseudo_flask = cartridge_in_pseudo_flask_name(
-            cartridge['chemical'])
+        out_pseudo_flask = cartridge_out_pseudo_flask_name(cartridge["chemical"])
+        in_pseudo_flask = cartridge_in_pseudo_flask_name(cartridge["chemical"])
         flasks[out_pseudo_flask] = out_pseudo_flask
         flasks[in_pseudo_flask] = in_pseudo_flask
     return flasks
 
-def get_optimal_arrangement(
-        xdl_obj, graph, flasks, inert_gas_flask, cartridges):
+
+def get_optimal_arrangement(xdl_obj, graph, flasks, inert_gas_flask, cartridges):
     """Get optimal arrangement of given flasks to minimise transfer distance and
     time.
 
@@ -219,22 +211,26 @@ def get_optimal_arrangement(
     add_cartridges_to_flasks(flasks, cartridges)
     transfers = get_transfers(xdl_obj, graph, flasks, inert_gas_flask)
     backbone = get_backbone(graph, ordered=True)
-    flask_nodes = list(flasks.values()) + [inert_gas_flask]
+    if inert_gas_flask:
+        flask_nodes = list(flasks.values()) + [inert_gas_flask]
+    else:
+        flask_nodes = list(flasks.values())
     available_ports = {
         i: get_valve_unused_ports(graph, valve, flask_nodes)
         for i, valve in enumerate(backbone)
     }
 
+    # # change available ports to only one
+    for i in available_ports:
+        if len(available_ports[i]) > 1:
+            available_ports[i] = [available_ports[i][0]]
+
     # Get transfers associated with every flask with the backbone position of
-    # every flask the reagent is being transferred to.
-    flask_transfers = group_transfers_by_flask(
-        graph, backbone, flask_nodes, transfers
-    )
+    # every flask the reagent is being transferred to. (valve_id, volume) to reactor
+    flask_transfers = group_transfers_by_flask(graph, backbone, flask_nodes, transfers)
 
     # Get position scores
-    position_scores = get_position_costs(
-        backbone, flask_transfers, flask_nodes
-    )
+    position_scores = get_position_costs(backbone, flask_transfers, flask_nodes)
 
     arrangement = simulated_annealing_optimal_arrangement(
         position_scores,
@@ -243,10 +239,10 @@ def get_optimal_arrangement(
     )
     return arrangement
 
+
+# 作用是基于距离和体积，给定最优连接位置，考虑传输距离和时间
 def get_position_costs(
-    backbone: List[str],
-    flask_transfers: Dict,
-    flask_nodes: List[str]
+    backbone: List[str], flask_transfers: Dict, flask_nodes: List[str]
 ) -> Dict:
     """For every flask get cost associated with every position on backbone.
     Return as dict: { 'flask_toluene': { '0': 1.0, '1': 0.86, '2': 0.5... }... }
@@ -264,9 +260,7 @@ def get_position_costs(
     """
     max_cost = 0
     position_costs = {
-        flask: {
-            i: 0 for i in range(len(backbone))
-        } for flask in flask_nodes
+        flask: {i: 0 for i in range(len(backbone))} for flask in flask_nodes
     }
 
     # Iterate through all transfers
@@ -277,10 +271,9 @@ def get_position_costs(
         # Enumerate through backbone
         for i in range(len(backbone)):
             # Get the cost
-            cost = sum([
-                (abs(i - transfer_i) + 1) * volume
-                for transfer_i, volume in transfers
-            ])
+            cost = sum(
+                [(abs(i - transfer_i) + 1) * volume for transfer_i, volume in transfers]
+            )
 
             # Set the cost
             flask_costs[i] = cost
@@ -297,11 +290,9 @@ def get_position_costs(
 
     return position_costs
 
+
 def group_transfers_by_flask(
-    graph: Dict,
-    backbone: List[str],
-    flasks: List[str],
-    transfers: Dict
+    graph: Dict, backbone: List[str], flasks: List[str], transfers: Dict
 ) -> Dict:
     """Group transfers by flasks. Return dict:
     { flask_node_name: [ (backbone_index, volume)... ]... }
@@ -313,9 +304,7 @@ def group_transfers_by_flask(
         transfers (Dict): Transfer information
     """
 
-    flask_transfers = {
-        flask: [] for flask in flasks
-    }
+    flask_transfers = {flask: [] for flask in flasks}
 
     # Iterate through all transfers
     for transfer, volume in transfers.items():
@@ -328,18 +317,17 @@ def group_transfers_by_flask(
 
         # Get position of other vessel on backbone
         backbone_valve_position = get_backbone_valve_position(
-            graph, backbone, other_vessel)
+            graph, backbone, other_vessel
+        )
 
         # If backbone position is found append to list. Sometimes backbone
         # position is not found in the case of buffer flasks. This, and general
         # support for buffer flasks needs to be sorted. TODO.
         if backbone_valve_position is not None:
-            flask_list.append((
-                backbone_valve_position,
-                volume
-            ))
+            flask_list.append((backbone_valve_position, volume))
 
     return flask_transfers
+
 
 def get_backbone_valve_position(
     graph: Dict, backbone: List[str], node: str
@@ -360,6 +348,7 @@ def get_backbone_valve_position(
             if valve == neighbor:
                 return i
     return None
+
 
 def get_valve_unused_ports(
     graph: Dict, valve: str, flask_nodes: List[str]
@@ -383,7 +372,7 @@ def get_valve_unused_ports(
         # Valve is a src
         if src == valve:
             # Get port data and add to used ports
-            src_port, dest_port = data['port']
+            src_port, dest_port = data["port"]
             used_ports.append(str(src_port))
 
         # Valve is the destination
@@ -391,11 +380,13 @@ def get_valve_unused_ports(
             # Src not in the flask nodes
             if src not in flask_nodes:
                 # Get port data and add to used ports
-                src_port, dest_port = data['port']
+                src_port, dest_port = data["port"]
                 used_ports.append(str(dest_port))
 
     # Return all unused ports based on used ports
-    return [str(i) for i in range(6) if str(i) not in used_ports]
+    # return [str(i) for i in range(6) if str(i) not in used_ports]
+    return [str(i) for i in range(4) if str(i) not in used_ports]
+
 
 def simulated_annealing_optimal_arrangement(
     position_costs: Dict,
@@ -463,14 +454,16 @@ def simulated_annealing_optimal_arrangement(
     for i in range(n_iterations):
 
         # Calculate threshold based on i
-        threshold = max((
-            starting_threshold
-            - ((starting_threshold / (n_iterations - quenching_iterations)) * i)
-        ), 0)
+        threshold = max(
+            (
+                starting_threshold
+                - ((starting_threshold / (n_iterations - quenching_iterations)) * i)
+            ),
+            0,
+        )
 
         # Get new arrangement and cost
-        new_arrangement = get_new_arrangement(
-            arrangement, flask_nodes, positions)
+        new_arrangement = get_new_arrangement(arrangement, flask_nodes, positions)
         new_cost = get_arrangement_cost(new_arrangement, position_costs)
 
         # New cost is less than previous cost, accept change
@@ -484,6 +477,7 @@ def simulated_annealing_optimal_arrangement(
             cost = new_cost
 
     return arrangement
+
 
 def get_all_positions(available_ports: Dict) -> List[Tuple[int, int]]:
     """Return all available positions in form: [(backbone_index, valve_port)...]
@@ -503,9 +497,8 @@ def get_all_positions(available_ports: Dict) -> List[Tuple[int, int]]:
 
     return positions
 
-def get_random_arrangement(
-    flask_nodes: List[str], positions: List[int]
-) -> Dict:
+
+def get_random_arrangement(flask_nodes: List[str], positions: List[int]) -> Dict:
     """Get random arrangement of flasks.
 
     Args:
@@ -520,10 +513,9 @@ def get_random_arrangement(
         arrangement[item] = random.choice(positions)
     return arrangement
 
+
 def get_new_arrangement(
-    prev_arrangement: Dict,
-    flask_nodes: List[str],
-    positions: List[int]
+    prev_arrangement: Dict, flask_nodes: List[str], positions: List[int]
 ) -> Dict:
     """Get new arrangement with random change from previous arrangement. Change
     can either be moving a random node to an unused position, or swapping two
@@ -546,9 +538,7 @@ def get_new_arrangement(
 
     # Get all unused positions
     unused_positions = [
-        position
-        for position in positions
-        if position not in used_positions
+        position for position in positions if position not in used_positions
     ]
 
     # Change it up
@@ -556,7 +546,7 @@ def get_new_arrangement(
     node_to_change = random.choice(flask_nodes)
 
     # Cartridge can't have same in / out position.
-    if '-cartridge-' in node_to_change:
+    if "-cartridge-" in node_to_change:
         cartridge_backbone_pos = new_arrangement[node_to_change][0]
         for i in reversed(range(len(changes))):
             if type(changes[i]) == tuple:
@@ -577,6 +567,7 @@ def get_new_arrangement(
         new_arrangement[change] = prev_arrangement[node_to_change]
 
     return new_arrangement
+
 
 def get_arrangement_cost(arrangement: Dict, position_costs: Dict) -> float:
     """Get cost of given arrangement. Calculated as mean of all individual

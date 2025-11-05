@@ -2,7 +2,7 @@
 <XDL>
 
 <Synthesis
-  graph_sha256="48d0f8de54edb1b09252ff17ff1f10d7f85b93283753aeb45d5a5b67eb82d400"
+  graph_sha256="2aec6d2824b5f234ab177f26e84f86d1b2b7aa96f446a064bb234a3a3ce1f9a7"
 >
 
   <Hardware>
@@ -129,20 +129,7 @@
         volume="5.0"
         dispense_speed="40.0"
         through_cartridge="None"
-        flush_tube_vessel="flask_nitrogen">
-        <CMove
-          from_vessel="flask_nitrogen"
-          to_vessel="reactor"
-          volume="5.0"
-          move_speed="40.0"
-          aspiration_speed="10.0"
-          dispense_speed="40.0"
-          from_port="0"
-          to_port="0"
-          through="None"
-          use_backbone="True"
-          repeats="1" />
-      </FlushTubing>
+        flush_tube_vessel="None" />
     </Add>
     <Add
       reagent="Y(NO3)3"
@@ -236,20 +223,7 @@
         volume="5.0"
         dispense_speed="40.0"
         through_cartridge="None"
-        flush_tube_vessel="flask_nitrogen">
-        <CMove
-          from_vessel="flask_nitrogen"
-          to_vessel="reactor"
-          volume="5.0"
-          move_speed="40.0"
-          aspiration_speed="10.0"
-          dispense_speed="40.0"
-          from_port="0"
-          to_port="0"
-          through="None"
-          use_backbone="True"
-          repeats="1" />
-      </FlushTubing>
+        flush_tube_vessel="None" />
     </Add>
     <Add
       reagent="AI(NO3)3"
@@ -343,20 +317,7 @@
         volume="5.0"
         dispense_speed="40.0"
         through_cartridge="None"
-        flush_tube_vessel="flask_nitrogen">
-        <CMove
-          from_vessel="flask_nitrogen"
-          to_vessel="reactor"
-          volume="5.0"
-          move_speed="40.0"
-          aspiration_speed="10.0"
-          dispense_speed="40.0"
-          from_port="0"
-          to_port="0"
-          through="None"
-          use_backbone="True"
-          repeats="1" />
-      </FlushTubing>
+        flush_tube_vessel="None" />
     </Add>
     <Add
       reagent="NHз·H2O"
@@ -450,23 +411,10 @@
         volume="5.0"
         dispense_speed="40.0"
         through_cartridge="None"
-        flush_tube_vessel="flask_nitrogen">
-        <CMove
-          from_vessel="flask_nitrogen"
-          to_vessel="reactor"
-          volume="5.0"
-          move_speed="40.0"
-          aspiration_speed="10.0"
-          dispense_speed="40.0"
-          from_port="0"
-          to_port="0"
-          through="None"
-          use_backbone="True"
-          repeats="1" />
-      </FlushTubing>
+        flush_tube_vessel="None" />
     </Add>
     <Shutdown
-      vacuums="vacuum_reactor"
+      vacuums=""
       heaters="reactor"
       stirrers=""
       rotavaps=""
@@ -474,10 +422,6 @@
       <CStopHeat
         vessel="reactor"
         heater="stirrer_reactor" />
-      <CStopVacuum
-        vessel="vacuum_reactor" />
-      <CVentVacuum
-        vessel="vacuum_reactor" />
     </Shutdown>
   </Procedure>
 

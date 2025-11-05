@@ -236,18 +236,6 @@
       "address": ""
     },
     {
-      "type": "vacuum",
-      "x": 1360,
-      "y": 400,
-      "internalId": 75,
-      "label": "vacuum_pump",
-      "id": "vacuum_pump",
-      "mode": "ethernet",
-      "class": "CVC3000",
-      "name": "vacuum_pump",
-      "address": "192.168.1.201"
-    },
-    {
       "type": "heater",
       "x": 240,
       "y": 320,
@@ -356,7 +344,7 @@
       "targetInternal": 16,
       "source": "reactor",
       "target": "valve_H",
-      "port": "(0,4)"
+      "port": "(0,1)"
     },
 
 
@@ -384,14 +372,7 @@
       "target": "waste_Z",
       "port": "(0,0)"
     },
-    {
-      "id": 1,
-      "sourceInternal": 13,
-      "targetInternal": 0,
-      "source": "valve_Z",
-      "target": "filter",
-      "port": "(4,top)"
-    },
+
     {
       "id": 31,
       "sourceInternal": 14,
@@ -414,7 +395,7 @@
       "targetInternal": 10,
       "source": "valve_H",
       "target": "reactor",
-      "port": "(4,0)"
+      "port": "(1,0)"
     },
     {
       "id": 86,
@@ -441,23 +422,6 @@
       "port": "(0,-1)"
     },
 
-
-    {
-      "id": 76,
-      "sourceInternal": 75,
-      "targetInternal": 12,
-      "source": "vacuum_pump",
-      "target": "rotavap",
-      "port": "(,)"
-    },
-    {
-      "id": 77,
-      "sourceInternal": 75,
-      "targetInternal": 72,
-      "source": "vacuum_pump",
-      "target": "vacuum_filter",
-      "port": "(,)"
-    },
     {
       "id": 79,
       "sourceInternal": 78,
@@ -520,31 +484,6 @@
       "targetInternal": 0,
       "source": "chiller_filter",
       "target": "filter",
-      "port": "(,)"
-    },
-
-    {
-      "id": 2,
-      "sourceInternal": 6,
-      "targetInternal": 16,
-      "source": "valve_vacuum",
-      "target": "valve_H",
-      "port": "(2,3)"
-    },
-    {
-      "id": 43,
-      "sourceInternal": 16,
-      "targetInternal": 6,
-      "source": "valve_H",
-      "target": "valve_vacuum",
-      "port": "(3,2)"
-    },
-    {
-      "id": 51,
-      "sourceInternal": 75,
-      "targetInternal": 47,
-      "source": "vacuum_pump",
-      "target": "vacuum_reactor",
       "port": "(,)"
     }
 

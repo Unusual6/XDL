@@ -45,9 +45,11 @@ from .apply_graph_spec import apply_spec_to_template
 
 
 # Path to template graph file
+
 HERE = os.path.abspath(os.path.dirname(__file__))
+DEFAULT_TEMPLATE = os.path.join(HERE, "template_yan_single.json")
 # DEFAULT_TEMPLATE = os.path.join(HERE, 'template_yan.json')
-DEFAULT_TEMPLATE = os.path.join(HERE, "template.json")
+# DEFAULT_TEMPLATE = os.path.join(HERE, "template_add.json")
 
 # Issues that can be addressed
 FIXABLE_ISSUES = {

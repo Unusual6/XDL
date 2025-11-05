@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 import networkx as nx
 
 # ========== Step 1: 加载你的 JSON ==========
-src = "chem_yan.json"
+src = "files/chem_yan.json"
+# save_name = "yan-k-g-x-y-ntri.png"
+save_name = "yan-test.png"
 
 # --------------------------
 # 1. 数据加载与关键信息提取
@@ -11,13 +13,6 @@ src = "chem_yan.json"
 with open(src, "r") as f:
     data = json.load(f)
 
-# data = {
-#     "directed": True,
-#     "multigraph": True,
-#     # 这里粘贴你的完整 JSON 数据 ↓↓↓
-#     "nodes": [...],  # ← 替换成你的完整 nodes 数组
-#     "links": [...]   # ← 替换成你的完整 links 数组
-# }
 
 # ========== Step 2: 构建图结构 ==========
 G = nx.MultiDiGraph()
@@ -149,7 +144,7 @@ plt.gca().add_artist(circle)
 
 plt.legend(fontsize=8, loc="upper right")
 plt.tight_layout()
-plt.savefig("graph_t.png", dpi=400, bbox_inches="tight")
+plt.savefig(f"{save_name}", dpi=400, bbox_inches="tight")
 # plt.show()
 
-print("✅ 拓扑图已保存为 graph_1.png")
+print("✅ 拓扑图已保存")

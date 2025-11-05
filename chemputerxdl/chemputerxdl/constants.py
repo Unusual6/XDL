@@ -49,10 +49,10 @@ DEFAULT_SEPARATION_SETTLE_TIME: int = 60 * 5
 DEFAULT_AUTO_CLEAN: bool = True
 
 #: Default solvent to use for organic cleaning steps.
-DEFAULT_ORGANIC_CLEANING_SOLVENT: str = 'ether'
+DEFAULT_ORGANIC_CLEANING_SOLVENT: str = "ether"
 
 #: Default solvent to use for aqueous cleaning steps.
-DEFAULT_AQUEOUS_CLEANING_SOLVENT: str = 'water'
+DEFAULT_AQUEOUS_CLEANING_SOLVENT: str = "water"
 
 #: Default volume in mL of cleaning solvent to transfer to waste during cleaning
 #: step.
@@ -109,20 +109,20 @@ DEFAULT_STIR_REAGENT_FLASK_SPEED: int = 200
 # CHEMPUTER DEVICE CLASS NAMES #
 ################################
 
-CHEMPUTER_FILTER: str = 'ChemputerFilter'
-CHEMPUTER_REACTOR: str = 'ChemputerReactor'
-CHEMPUTER_CARTRIDGE: str = 'ChemputerCartridge'
-CHEMPUTER_WASTE: str = 'ChemputerWaste'
-CHEMPUTER_FLASK: str = 'ChemputerFlask'
-CHEMPUTER_VACUUM: str = 'ChemputerVacuum'
-CHEMPUTER_SEPARATOR: str = 'ChemputerSeparator'
-CHEMPUTER_VALVE: str = 'ChemputerValve'
-CHEMPUTER_PUMP: str = 'ChemputerPump'
+CHEMPUTER_FILTER: str = "ChemputerFilter"
+CHEMPUTER_REACTOR: str = "ChemputerReactor"
+CHEMPUTER_CARTRIDGE: str = "ChemputerCartridge"
+CHEMPUTER_WASTE: str = "ChemputerWaste"
+CHEMPUTER_FLASK: str = "ChemputerFlask"
+CHEMPUTER_VACUUM: str = "ChemputerVacuum"
+CHEMPUTER_SEPARATOR: str = "ChemputerSeparator"
+CHEMPUTER_VALVE: str = "ChemputerValve"
+CHEMPUTER_PUMP: str = "ChemputerPump"
 
-JULABO_CF41: str = 'JULABOCF41'
-HUBER_PETITE_FLEUR: str = 'Huber'
-IKA_RCT_DIGITAL: str = 'IKARCTDigital'
-IKA_RET_CONTROL_VISC: str = 'IKARETControlVisc'
+JULABO_CF41: str = "JULABOCF41"
+HUBER_PETITE_FLEUR: str = "Huber"
+IKA_RCT_DIGITAL: str = "IKARCTDigital"
+IKA_RET_CONTROL_VISC: str = "IKARETControlVisc"
 IKA_RV_10 = "IKARV10"
 CVC3000 = "CVC3000"
 IKA_MICROSTAR_75 = "IKAmicrostar75"
@@ -131,8 +131,7 @@ HEIDOLPH_TORQUE_100 = "HeiTORQUE_100"
 
 
 HEATER_CLASSES: List[str] = [IKA_RCT_DIGITAL, IKA_RET_CONTROL_VISC]
-CHILLER_CLASSES: List[str] = [
-    JULABO_CF41, HUBER_PETITE_FLEUR]
+CHILLER_CLASSES: List[str] = [JULABO_CF41, HUBER_PETITE_FLEUR]
 
 ROTAVAP_CLASSES: List[str] = [IKA_RV_10]
 VACUUM_CLASSES: List[str] = [CVC3000]
@@ -143,10 +142,10 @@ SEPARATOR_CLASSES: List[str] = [CHEMPUTER_SEPARATOR]
 FLASK_CLASSES: List[str] = [CHEMPUTER_FLASK]
 
 COMPONENT_CLASS_TYPE_DICT = {
-    'ChemputerFilter': 'filter',
-    'ChemputerReactor': 'reactor',
-    'ChemputerSeparator': 'separator',
-    'IKARV10': 'rotavap',
+    "ChemputerFilter": "filter",
+    "ChemputerReactor": "reactor",
+    "ChemputerSeparator": "separator",
+    "IKARV10": "rotavap",
 }
 
 CHILLER_MIN_TEMP: int = -40
@@ -154,42 +153,43 @@ CHILLER_MAX_TEMP: int = 140
 HEATER_MAX_TEMP: int = 360
 
 # Filter, separator ports
-BOTTOM_PORT: str = 'bottom'
-TOP_PORT: str = 'top'
+BOTTOM_PORT: str = "bottom"
+TOP_PORT: str = "top"
 # Rotavap ports
-EVAPORATE_PORT: str = 'evaporate'
-COLLECT_PORT: str = 'collect'
+EVAPORATE_PORT: str = "evaporate"
+COLLECT_PORT: str = "collect"
 
 VALID_PORTS = {
-    'ChemputerReactor': ['0', '1', '2'],
-    'ChemputerSeparator': ['top', 'bottom'],
-    'ChemputerFilter': ['top', 'bottom'],
-    'IKARV10': ['evaporate', 'collect'],
-    'ChemputerValve': ['-1', '0', '1', '2', '3', '4', '5'],
-    'ChemputerPump': ['0'],
-    'ChemputerWaste': ['0'],
-    'ChemputerFlask': ['0'],
-    'ChemputerCartridge': ['in', 'out'],
-    'ChemputerVacuum': ['0'],
-    'CommanduinoLabware': ['0'],
+    "ChemputerReactor": ["0", "1", "2"],
+    "ChemputerSeparator": ["top", "bottom"],
+    "ChemputerFilter": ["top", "bottom"],
+    "IKARV10": ["evaporate", "collect"],
+    # 'ChemputerValve': ['-1', '0', '1', '2', '3', '4', '5'],
+    "ChemputerValve": ["-1", "0", "1", "2", "3"],
+    "ChemputerPump": ["0"],
+    "ChemputerWaste": ["0"],
+    "ChemputerFlask": ["0"],
+    "ChemputerCartridge": ["in", "out"],
+    "ChemputerVacuum": ["0"],
+    "CommanduinoLabware": ["0"],
 }
 
 DEFAULT_PORTS: Dict[str, Dict[str, str]] = {
-    'ChemputerSeparator': {'from': 'bottom', 'to': 'bottom'},
-    'ChemputerReactor': {'from': 0, 'to': 0},
-    'ChemputerFilter': {'from': 'bottom', 'to': 'top'},
-    'ChemputerPump': {'from': 0, 'to': 0},
-    'IKARV10': {'from': 'evaporate', 'to': 'evaporate'},
-    'ChemputerFlask': {'from': 0, 'to': 0},
-    'ChemputerWaste': {'from': 0, 'to': 0},
-    'CommanduinoLabware': {'from': 0, 'to': 0}
+    "ChemputerSeparator": {"from": "bottom", "to": "bottom"},
+    "ChemputerReactor": {"from": 0, "to": 0},
+    "ChemputerFilter": {"from": "bottom", "to": "top"},
+    "ChemputerPump": {"from": 0, "to": 0},
+    "IKARV10": {"from": "evaporate", "to": "evaporate"},
+    "ChemputerFlask": {"from": 0, "to": 0},
+    "ChemputerWaste": {"from": 0, "to": 0},
+    "CommanduinoLabware": {"from": 0, "to": 0},
 }
 
 #: Prop type to use for ports, ensures parsed correctly in XDLBase sanitization
 PORT_PROP_TYPE = Union[str, int]
 
-FILTER_DEAD_VOLUME_INERT_GAS_METHOD: str = 'inert_gas'
-FILTER_DEAD_VOLUME_LIQUID_METHOD: str = 'solvent'
+FILTER_DEAD_VOLUME_INERT_GAS_METHOD: str = "inert_gas"
+FILTER_DEAD_VOLUME_LIQUID_METHOD: str = "solvent"
 
 #: Time to wait during venting of vacuum to ambient pressure.
 DEFAULT_VACUUM_VENT_WAIT_TIME: float = 60

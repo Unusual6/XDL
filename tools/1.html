@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可拖动化学拓扑图（修复版）</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .node { stroke: #fff; stroke-width: 1.5px; cursor: move; }
+        .node:active { stroke: #333; stroke-width: 2px; }
+        .link { stroke: #999; stroke-opacity: 0.6; stroke-width: 2px; }
+        .label { font-size: 12px; font-family: Arial, sans-serif; pointer-events: none; }
+        .legend-item { font-size: 12px; font-family: Arial, sans-serif; }
+        .background-circle { stroke: #ddd; stroke-dasharray: 5,5; fill: none; }
+        .upload-container { margin: 10px; padding: 10px; border: 1px dashed #ccc; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <input type="file" id="jsonUpload" accept=".json">
+        <button onclick="loadSampleData()">加载示例数据</button>
+    </div>
+    <svg width="960" height="800"></svg>
+
+    <script>
+        // 节点样式配置
+        const nodeTypes = {
+            "reactor": {"color": "#ff7f0e", "shape": "o", "size": 50},
+            "valve": {"color": "#1f77b4", "shape": "s", "size": 40},
+            "pump": {"color": "#2ca02c", "shape": "d", "size": 45},
+            "flask": {"color": "#9467bd", "shape": "o", "size": 35},
+            "waste": {"color": "#d62728", "shape": "t", "size": 40},
+            "heater": {"color": "#8c564b", "shape": "p", "size": 45},
+            "vacuum": {"color": "#17becf", "shape": "h", "size": 45},
+            "unknown": {"color": "#7f7f7f", "shape": "o", "size": 30}
+        };
+
+        // 布局参数
+        const R_valve = 300;
+        const R_local = 80;
+        const R_outer = R_valve + 120;
+        const svg = d3.select("svg");
+        const width = +svg.attr("width");
+        const height = +svg.attr("height");
+        const centerX = width / 2;
+        const centerY = height / 2;
+
+        // 存储当前节点位置（用于拖动时更新）
+        let currentPositions = new Map();
+
+        // 初始化：创建箭头标记
+        svg.append("defs").selectAll("marker")
+            .data(["end"])
+            .enter().append("marker")
+            .attr("id", d => d)
+            .attr("viewBox", "0 -5 10 10")
+            .attr("refX", 25)
+            .attr("refY", 0)
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-5L10,0L0,5")
+            .attr("fill", "#999");
+
+        // 监听文件上传事件 - 增加数据格式自动处理
+        document.getElementById("jsonUpload").addEventListener("change", function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    let data = JSON.parse(event.target.result);
+
+                    // 关键修复1：统一节点ID为字符串类型
+                    data.nodes = data.nodes.map(node => ({
+                        ...node,
+                        id: String(node.id)  // 强制转换为字符串
+                    }));
+
+                    // 关键修复2：统一链路source/target为字符串类型
+                    data.links = data.links.map(link => ({
+                        ...link,
+                        source: String(link.source),  // 强制转换为字符串
+                        target: String(link.target)   // 强制转换为字符串
+                    }));
+
+                    renderTopology(data);
+                    console.log("✅ JSON数据加载成功，共", data.nodes.length, "个节点");
+                } catch (err) {
+                    alert("JSON格式错误：" + err.message);
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        // 加载示例数据
+        function loadSampleData() {
+            const sampleData = {
+                "nodes": [
+                    {"id": "r1", "type": "reactor", "label": "Reactor 1"},
+                    {"id": "v1", "type": "valve", "label": "Valve 1"},
+                    {"id": "v2", "type": "valve", "label": "Valve 2"},
+                    {"id": "p1", "type": "pump", "label": "Pump 1"},
+                    {"id": "f1", "type": "flask", "label": "Flask 1"}
+                ],
+                "links": [
+                    {"source": "r1", "target": "v1"},
+                    {"source": "r1", "target": "v2"},
+                    {"source": "v1", "target": "p1"},
+                    {"source": "v2", "target": "f1"}
+                ]
+            };
+            renderTopology(sampleData);
+            console.log("✅ 示例数据加载成功");
+        }
+
+        // 核心渲染函数：根据数据绘制拓扑图
+        function renderTopology(data) {
+            // 清除现有内容
+            svg.selectAll("g").remove();
+            currentPositions.clear();
+
+            // 计算节点位置
+            const positions = calculatePositions(data.nodes, data.links);
+            currentPositions = new Map(positions); // 保存初始位置
+
+            // 绘制背景圈
+            svg.append("circle")
+                .attr("class", "background-circle")
+                .attr("cx", centerX)
+                .attr("cy", centerY)
+                .attr("r", R_valve + 10);
+
+            // 绘制连接线（单独分组便于更新）
+            const linkGroup = svg.append("g").attr("class", "link-group");
+            const links = linkGroup.selectAll("line")
+                .data(data.links)
+                .enter().append("line")
+                .attr("class", "link")
+                .attr("x1", d => positions.get(d.source).x)
+                .attr("y1", d => positions.get(d.source).y)
+                .attr("x2", d => positions.get(d.target).x)
+                .attr("y2", d => positions.get(d.target).y)
+                .attr("marker-end", "url(#end)");
+
+            // 绘制节点和标签（单独分组用于拖动）
+            const nodeGroup = svg.append("g").attr("class", "node-group");
+            const nodeGroups = nodeGroup.selectAll(".node-group")
+                .data(data.nodes)
+                .enter().append("g")
+                .attr("class", "node-group")
+                .attr("transform", d => `translate(${positions.get(d.id).x},${positions.get(d.id).y})`)
+                .call(d3.drag()
+                    .on("start", dragStarted)
+                    .on("drag", dragged)
+                    .on("end", dragEnded)
+                );
+
+            // 绘制节点形状
+            nodeGroups.each(function(d) {
+                const style = nodeTypes[d.type] || nodeTypes.unknown;
+                const node = d3.select(this);
+                switch(style.shape) {
+                    case "o": // 圆形
+                        node.append("circle").attr("r", style.size/2).attr("fill", style.color).attr("class", "node");
+                        break;
+                    case "s": // 方形
+                        node.append("rect").attr("width", style.size).attr("height", style.size)
+                            .attr("x", -style.size/2).attr("y", -style.size/2).attr("fill", style.color).attr("class", "node");
+                        break;
+                    case "d": // 菱形
+                        node.append("path").attr("d", `M0,-${style.size/2} L${style.size/2},0 L0,${style.size/2} L-${style.size/2},0 Z`)
+                            .attr("fill", style.color).attr("class", "node");
+                        break;
+                    case "t": // 三角形
+                        node.append("path").attr("d", `M0,-${style.size/2} L${style.size/2},${style.size/2} L-${style.size/2},${style.size/2} Z`)
+                            .attr("fill", style.color).attr("class", "node");
+                        break;
+                    case "p": // 五边形
+                        node.append("path").attr("d", createPolygonPath(5, style.size/2)).attr("fill", style.color).attr("class", "node");
+                        break;
+                    case "h": // 六边形
+                        node.append("path").attr("d", createPolygonPath(6, style.size/2)).attr("fill", style.color).attr("class", "node");
+                        break;
+                }
+            });
+
+            // 绘制节点标签
+            nodeGroups.append("text")
+                .attr("class", "label")
+                .attr("dx", d => (nodeTypes[d.type] || nodeTypes.unknown).size/2 + 5)
+                .attr("dy", ".35em")
+                .text(d => d.label || d.id);
+
+            // 绘制图例
+            const legend = svg.append("g").attr("transform", "translate(20, 20)");
+            Object.entries(nodeTypes).forEach(([type, style], i) => {
+                const item = legend.append("g").attr("transform", `translate(0, ${i*25})`);
+                // 图例形状
+                switch(style.shape) {
+                    case "o": item.append("circle").attr("r", style.size/4).attr("fill", style.color); break;
+                    case "s": item.append("rect").attr("width", style.size/2).attr("height", style.size/2).attr("fill", style.color); break;
+                    case "d": item.append("path").attr("d", `M0,-${style.size/4} L${style.size/4},0 L0,${style.size/4} L-${style.size/4},0 Z`).attr("fill", style.color); break;
+                    case "t": item.append("path").attr("d", `M0,-${style.size/4} L${style.size/4},${style.size/4} L-${style.size/4},${style.size/4} Z`).attr("fill", style.color); break;
+                    case "p": item.append("path").attr("d", createPolygonPath(5, style.size/4)).attr("fill", style.color); break;
+                    case "h": item.append("path").attr("d", createPolygonPath(6, style.size/4)).attr("fill", style.color); break;
+                }
+                // 图例文本
+                item.append("text").attr("x", 20).attr("y", 5).text(type.charAt(0).toUpperCase() + type.slice(1));
+            });
+
+            // 拖动相关函数 - 关键修复3：统一ID比较方式
+            function dragStarted(event, d) {
+                d3.select(this).raise().classed("active", true);
+            }
+
+            function dragged(event, d) {
+                // 强制转换为字符串ID，确保匹配一致性
+                const nodeId = String(d.id);
+                // 更新节点位置
+                d3.select(this).attr("transform", `translate(${event.x},${event.y})`);
+                // 更新位置存储
+                currentPositions.set(nodeId, {x: event.x, y: event.y});
+                // 更新相关连接线（使用字符串比较）
+                links
+                    .filter(l => String(l.source) === nodeId)
+                    .attr("x1", event.x)
+                    .attr("y1", event.y);
+                links
+                    .filter(l => String(l.target) === nodeId)
+                    .attr("x2", event.x)
+                    .attr("y2", event.y);
+            }
+
+            function dragEnded(event, d) {
+                d3.select(this).classed("active", false);
+            }
+        }
+
+        // 辅助函数：计算节点位置 - 关键修复4：使用字符串ID处理
+        function calculatePositions(nodes, links) {
+            // 节点ID统一转为字符串
+            const nodeMap = new Map(nodes.map(n => [String(n.id), n]));
+            const adjacency = new Map(nodes.map(n => [String(n.id), []]));
+
+            // 链路处理时也转为字符串
+            links.forEach(l => {
+                const source = String(l.source);
+                const target = String(l.target);
+                adjacency.get(source).push(target);
+                adjacency.get(target).push(source);
+            });
+
+            // 中心节点（反应器优先）
+            const reactors = nodes.filter(n => n.type === "reactor");
+            const centerNode = reactors.length ? String(reactors[0].id) : String(nodes[0].id);
+            const pos = new Map([[centerNode, {x: centerX, y: centerY}]]);
+
+            // 放置阀门节点
+            const valves = nodes
+                .filter(n => n.type === "valve" && String(n.id) !== centerNode)
+                .map(n => String(n.id));
+
+            valves.forEach((v, i) => {
+                const angle = 2 * Math.PI * i / valves.length;
+                pos.set(v, {x: centerX + R_valve * Math.cos(angle), y: centerY + R_valve * Math.sin(angle)});
+            });
+
+            // 放置阀门邻居节点
+            valves.forEach(v => {
+                const neighbors = [...new Set([...adjacency.get(v)])]
+                    .filter(n => !pos.has(n) && n !== centerNode);
+
+                neighbors.forEach((n, j) => {
+                    const angle = 2 * Math.PI * j / neighbors.length;
+                    const vPos = pos.get(v);
+                    pos.set(n, {
+                        x: vPos.x + R_local * Math.cos(angle),
+                        y: vPos.y + R_local * Math.sin(angle)
+                    });
+                });
+            });
+
+            // 放置未分配节点（外圈）
+            const unplaced = nodes
+                .map(n => String(n.id))
+                .filter(id => !pos.has(id));
+
+            unplaced.forEach((n, i) => {
+                const angle = 2 * Math.PI * i / unplaced.length;
+                pos.set(n, {
+                    x: centerX + R_outer * Math.cos(angle),
+                    y: centerY + R_outer * Math.sin(angle)
+                });
+            });
+
+            return pos;
+        }
+
+        // 辅助函数：创建多边形路径
+        function createPolygonPath(sides, radius) {
+            let path = "";
+            for (let i = 0; i < sides; i++) {
+                const angle = (i * 2 * Math.PI / sides) - Math.PI / 2;
+                path += (i ? "L" : "M") + radius * Math.cos(angle) + "," + radius * Math.sin(angle);
+            }
+            return path + "Z";
+        }
+
+        // 初始加载示例数据
+        loadSampleData();
+    </script>
+</body>
+</html>
