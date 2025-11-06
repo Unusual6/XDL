@@ -4,8 +4,8 @@ from typing import Any, Dict, Union
 # Other
 import tabulate
 
-from xdl.utils.prop_limits import TIME_PROP_LIMIT
-from xdl.utils.sanitisation import convert_val_to_std_units
+from xdl_master.xdl.utils.prop_limits import TIME_PROP_LIMIT
+from xdl_master.xdl.utils.sanitisation import convert_val_to_std_units
 
 
 class FTNDuration:

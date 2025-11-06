@@ -8,14 +8,14 @@ from typing import Any, Dict, List, Optional, Tuple
 from networkx import MultiDiGraph
 from networkx.readwrite import node_link_data
 
-from xdl.errors import (
+from xdl_master.xdl.errors import (
     XDLExecutionBeforeCompilationError,
     XDLExecutionOnDifferentGraphError,
 )
-from xdl.execution.utils import do_sanity_check
-from xdl.steps import NON_RECURSIVE_ABSTRACT_STEPS
-from xdl.steps.base_steps import AbstractDynamicStep, Step
-from xdl.utils.logging import get_logger
+from xdl_master.xdl.execution.utils import do_sanity_check
+from xdl_master.xdl.steps import NON_RECURSIVE_ABSTRACT_STEPS
+from xdl_master.xdl.steps.base_steps import AbstractDynamicStep, Step
+from xdl_master.xdl.utils.logging import get_logger
 
 if False:
     from xdl import XDL

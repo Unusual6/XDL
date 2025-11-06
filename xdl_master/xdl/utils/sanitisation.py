@@ -5,7 +5,7 @@ and converting values to floats in standard units.
 import re
 from typing import Callable, Dict, Type, Union
 
-from xdl.utils.prop_limits import (
+from xdl_master.xdl.utils.prop_limits import (
     BOOL_PROP_LIMIT,
     POSITIVE_FLOAT_PROP_LIMIT,
     POSITIVE_INT_PROP_LIMIT,

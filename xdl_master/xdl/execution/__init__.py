@@ -1,1 +1,1 @@
-from xdl.execution.abstract_executor import AbstractXDLExecutor
+from xdl_master.xdl.execution.abstract_executor import AbstractXDLExecutor

@@ -11,6 +11,8 @@ serial
 tabulate
 termcolor
 matplotlib
+nest_asyncio
+pandas
 # 补充 yml 中的系统依赖（pip 会自动安装兼容版本）
 # bzip2
 # expat

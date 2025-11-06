@@ -1,6 +1,6 @@
 from networkx import MultiDiGraph
 
-from xdl.steps import NON_RECURSIVE_ABSTRACT_STEPS, AbstractDynamicStep, Step
+from xdl_master.xdl.steps import NON_RECURSIVE_ABSTRACT_STEPS, AbstractDynamicStep, Step
 
 
 def do_sanity_check(graph: MultiDiGraph, step: Step) -> None:

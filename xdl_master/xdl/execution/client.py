@@ -11,12 +11,12 @@ import appdirs
 import socketio
 from networkx import MultiDiGraph
 
-from xdl import XDL
-from xdl.constants import CHEMIFY_API_URL
-from xdl.errors import XDLError
-from xdl.platforms.abstract_platform import AbstractPlatform
-from xdl.steps import NON_RECURSIVE_ABSTRACT_STEPS, Step
-from xdl.steps.core.step import execute_step
+from xdl_master.xdl import XDL
+from xdl_master.xdl.constants import CHEMIFY_API_URL
+from xdl_master.xdl.errors import XDLError
+from xdl_master.xdl.platforms.abstract_platform import AbstractPlatform
+from xdl_master.xdl.steps import NON_RECURSIVE_ABSTRACT_STEPS, Step
+from xdl_master.xdl.steps.core.step import execute_step
 
 sio = socketio.Client()
 

@@ -2,7 +2,7 @@
 not really high priority.
 """
 
-from xdl.reagents import Reagent
+from xdl_master.xdl.reagents import Reagent
 
 
 def add_metadata_namespace():

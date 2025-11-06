@@ -1,8 +1,16 @@
 创建镜像
 docker build --no-cache -t xdl-app .
 
+启动
+sudo dockerd
+
 运行
-docker run --rm -it xdl_v1
+docker run --rm -it 5937a4868089
+
+docker run --rm -it --entrypoint /bin/bash ccb2d06cbcd3
+
+打包容器为镜像
+docker commit e53ccc716edd xdl_1106_3:v4
 
 删除所有
 docker rmi -f $(docker images -aq)
@@ -12,9 +20,13 @@ docker rmi -f $(docker images -aq)
 下拉
 docker pull crpi-ozc90smm2waxngse.cn-hangzhou.personal.cr.aliyuncs.com/xdl_jpf/xdl_v1:v3
 
-启动
-sudo dockerd
 
 docker images
 
-sudo docker run --rm -it --name xdl_v3_container --entrypoint /bin/bash crpi-ozc90smm2waxngse.cn-hangzhou.personal.cr.aliyuncs.com/xdl_jpf/xdl_v1:v3
+
+本地文件覆盖容器中文件
+docker cp /home/pfjial/ChemputerSoftware/submission-code/xdl_master/xdl/utils/sanitisation.py 06847f551377:/xdl_
+master/xdl/utils/sanitisation.py
+
+提交
+git commit -m"xxx" --no-verify

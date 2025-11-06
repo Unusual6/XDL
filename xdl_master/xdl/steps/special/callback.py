@@ -1,6 +1,6 @@
 from typing import Any, Callable, Dict, List, Optional
 
-from xdl.steps import AbstractBaseStep
+from xdl_master.xdl.steps import AbstractBaseStep
 
 
 class Callback(AbstractBaseStep):

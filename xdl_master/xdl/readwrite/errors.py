@@ -1,4 +1,4 @@
-from xdl.errors import XDLError
+from xdl_master.xdl.errors import XDLError
 
 
 class XDLReadError(XDLError):

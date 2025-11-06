@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-from xdl.errors import (
+from xdl_master.xdl.errors import (
     XDLStepTemplateInvalidDefaultPropError,
     XDLStepTemplateInvalidPropLimitError,
     XDLStepTemplateMissingDefaultPropError,
@@ -9,8 +9,8 @@ from xdl.errors import (
     XDLStepTemplateNameError,
     XDLStepTemplatePropTypeError,
 )
-from xdl.utils.prop_limits import PropLimit
-from xdl.utils.xdl_base import XDLBase
+from xdl_master.xdl.utils.prop_limits import PropLimit
+from xdl_master.xdl.utils.xdl_base import XDLBase
 
 
 class AbstractXDLElementTemplate(XDLBase):
