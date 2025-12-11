@@ -27,8 +27,9 @@ def main():
     )
 
     parser.add_argument(
-        "--xdl_file", default="files/chem_yan.xdl", type=str, help="输入xdl"
+        "--xdl_file", default="files/llm_xdl.xdl", type=str, help="输入xdl"
     )
+    # chem_yan.xdl  llm_xdl
     # parser.add_argument('--xdl_file', default='files/chem_parallel.xdl', type=str, help="yan.xdl）")
 
     parser.add_argument(
@@ -46,7 +47,7 @@ def main():
     # 2. 核心：步骤选择参数（必选，指定执行哪一步）
     parser.add_argument(
         "--step",
-        default="run",
+        default="compile",
         required=False,
         choices=["graph", "compile", "run"],
         help="指定执行的步骤：\n"

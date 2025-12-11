@@ -64,7 +64,7 @@ NO_DUPLICATE_CLEAN_STEPS: List[type] = [
 # Names of common solvents used in syntheses
 COMMON_SOLVENT_NAMES = [
     'acetic acid',
-    'acetone',
+    # 'acetone',
     'acetonitrile',
     'mecn',
     'benzene',
@@ -176,7 +176,7 @@ COMMON_SOLVENT_NAMES = [
     'trichloroethene',
     'trichloroethylene',
     'tce',
-    'water',
+    # 'water',
     'h2o',
     'o-xylene',
     'm-xylene',

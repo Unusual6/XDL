@@ -15,9 +15,3 @@ ENTRYPOINT ["python"]
 
 # 默认显示帮助（可选）
 CMD ["--help"]
-
-
-
-
-
-

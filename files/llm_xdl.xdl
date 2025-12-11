@@ -1,0 +1,28 @@
+<?xdl version="1.0.0" ?>
+<XDL>
+  <Synthesis>
+    <Hardware>
+      <Component id="reactor" type="reactor" />
+    </Hardware>
+    <Reagents>
+      <Reagent name="ZrCl4" id="ZrCl4" role="reagent" />
+      <Reagent name="Water" id="Water" role="reagent" />
+      <Reagent name="Ammonia" id="Ammonia" role="reagent" />
+      <Reagent name="Stabilizer" id="Stabilizer" role="reagent" />
+    </Reagents>
+    <Procedure>
+      <Add reagent="ZrCl4" vessel="reactor" volume="100 uL" />
+     <Add reagent="Water" vessel="reactor" volume="200 uL" />
+     <Add reagent="Ammonia" vessel="reactor" volume="50 uL" />
+     <Add reagent="Stabilizer" vessel="reactor" volume="10 uL" />
+    </Procedure>
+    <Metadata>
+      <Experiment target="Zirconia (ZrO2)" sample_id="" type="SYNTHESIS" generated_time="2025-12-10 17:46:07" />
+      <Parameters>
+        <Parameter name="stage" value="mixed precursor" />
+        <Parameter name="core_action" value="mixing" />
+        <Parameter name="output_format" value="xdl" />
+      </Parameters>
+    </Metadata>
+  </Synthesis>
+</XDL>

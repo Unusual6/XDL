@@ -1,0 +1,408 @@
+<?xdl version="2.0.0" ?>
+<XDL>
+
+<Synthesis
+  graph_sha256="605796f0e3580a103e89d3f83f4be92e599ffeefc331811b1301bbaea1784e80"
+>
+
+  <Hardware>
+    <Component
+      id="reactor"
+      type="reactor" />
+  </Hardware>
+
+  <Reagents>
+    <Reagent
+      name="zirconium alkoxide"
+      id="zirconium alkoxide"
+      role="reagent" />
+    <Reagent
+      name="solvent (ethanol)"
+      id="solvent (ethanol)"
+      role="reagent" />
+    <Reagent
+      name="water"
+      id="water"
+      role="reagent" />
+    <Reagent
+      name="acid catalyst"
+      id="acid catalyst"
+      role="reagent" />
+  </Reagents>
+
+  <Procedure>
+    <Add
+      reagent="zirconium alkoxide"
+      vessel="reactor"
+      volume="40.0"
+      mass="None"
+      port="0"
+      through="None"
+      move_speed="40.0"
+      aspiration_speed="10.0"
+      dispense_speed="40.0"
+      viscous="False"
+      time="None"
+      stir="False"
+      stir_speed="250.0"
+      confirm_solid="True"
+      anticlogging="False"
+      anticlogging_solvent="None"
+      anticlogging_solvent_volume="2.0"
+      anticlogging_reagent_volume="10.0"
+      through_cartridge="None"
+      reagent_vessel="flask_zirconium alkoxide"
+      waste_vessel="waste_H"
+      vessel_type="reactor"
+      anticlogging_solvent_vessel="None"
+      prime_n_times="1"
+      priming_volume="3.0">
+      <StopStir
+        vessel="reactor"
+        vessel_type="reactor"
+        vessel_has_stirrer="True">
+        <CStopStir
+          vessel="reactor"
+          stirrer="stirrer_reactor" />
+      </StopStir>
+      <PrimePumpForAdd
+        reagent="zirconium alkoxide"
+        volume="3.0"
+        reagent_vessel="flask_zirconium alkoxide"
+        waste_vessel="waste_H"
+        prime_n_times="1"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0">
+        <Repeat
+          repeats="1">
+          <CMove
+            from_vessel="flask_zirconium alkoxide"
+            to_vessel="waste_H"
+            volume="3.0"
+            move_speed="40.0"
+            aspiration_speed="10.0"
+            dispense_speed="40.0"
+            from_port="0"
+            to_port="0"
+            through=""
+            use_backbone="True"
+            repeats="1" />
+        </Repeat>
+      </PrimePumpForAdd>
+      <CMove
+        from_vessel="flask_zirconium alkoxide"
+        to_vessel="reactor"
+        volume="40.0"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0"
+        from_port="0"
+        to_port="0"
+        through="None"
+        use_backbone="True"
+        repeats="1" />
+      <Wait
+        time="10.0"
+        wait_recording_speed="2000.0"
+        after_recording_speed="14.0">
+        <CSetRecordingSpeed
+          recording_speed="2000.0" />
+        <CWait
+          time="10.0" />
+        <CSetRecordingSpeed
+          recording_speed="14.0" />
+      </Wait>
+      <FlushTubing
+        to_vessel="reactor"
+        to_port="0"
+        volume="5.0"
+        dispense_speed="40.0"
+        through_cartridge="None"
+        flush_tube_vessel="None" />
+    </Add>
+    <Add
+      reagent="solvent (ethanol)"
+      vessel="reactor"
+      volume="40.0"
+      mass="None"
+      port="0"
+      through="None"
+      move_speed="40.0"
+      aspiration_speed="10.0"
+      dispense_speed="40.0"
+      viscous="False"
+      time="None"
+      stir="False"
+      stir_speed="250.0"
+      confirm_solid="True"
+      anticlogging="False"
+      anticlogging_solvent="None"
+      anticlogging_solvent_volume="2.0"
+      anticlogging_reagent_volume="10.0"
+      through_cartridge="None"
+      reagent_vessel="flask_solvent (ethanol)"
+      waste_vessel="waste_H"
+      vessel_type="reactor"
+      anticlogging_solvent_vessel="None"
+      prime_n_times="1"
+      priming_volume="3.0">
+      <StopStir
+        vessel="reactor"
+        vessel_type="reactor"
+        vessel_has_stirrer="True">
+        <CStopStir
+          vessel="reactor"
+          stirrer="stirrer_reactor" />
+      </StopStir>
+      <PrimePumpForAdd
+        reagent="solvent (ethanol)"
+        volume="3.0"
+        reagent_vessel="flask_solvent (ethanol)"
+        waste_vessel="waste_H"
+        prime_n_times="1"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0">
+        <Repeat
+          repeats="1">
+          <CMove
+            from_vessel="flask_solvent (ethanol)"
+            to_vessel="waste_H"
+            volume="3.0"
+            move_speed="40.0"
+            aspiration_speed="10.0"
+            dispense_speed="40.0"
+            from_port="0"
+            to_port="0"
+            through=""
+            use_backbone="True"
+            repeats="1" />
+        </Repeat>
+      </PrimePumpForAdd>
+      <CMove
+        from_vessel="flask_solvent (ethanol)"
+        to_vessel="reactor"
+        volume="40.0"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0"
+        from_port="0"
+        to_port="0"
+        through="None"
+        use_backbone="True"
+        repeats="1" />
+      <Wait
+        time="10.0"
+        wait_recording_speed="2000.0"
+        after_recording_speed="14.0">
+        <CSetRecordingSpeed
+          recording_speed="2000.0" />
+        <CWait
+          time="10.0" />
+        <CSetRecordingSpeed
+          recording_speed="14.0" />
+      </Wait>
+      <FlushTubing
+        to_vessel="reactor"
+        to_port="0"
+        volume="5.0"
+        dispense_speed="40.0"
+        through_cartridge="None"
+        flush_tube_vessel="None" />
+    </Add>
+    <Add
+      reagent="water"
+      vessel="reactor"
+      volume="10.0"
+      mass="None"
+      port="0"
+      through="None"
+      move_speed="40.0"
+      aspiration_speed="10.0"
+      dispense_speed="40.0"
+      viscous="False"
+      time="None"
+      stir="False"
+      stir_speed="250.0"
+      confirm_solid="True"
+      anticlogging="False"
+      anticlogging_solvent="None"
+      anticlogging_solvent_volume="2.0"
+      anticlogging_reagent_volume="10.0"
+      through_cartridge="None"
+      reagent_vessel="flask_water"
+      waste_vessel="waste_H"
+      vessel_type="reactor"
+      anticlogging_solvent_vessel="None"
+      prime_n_times="1"
+      priming_volume="3.0">
+      <StopStir
+        vessel="reactor"
+        vessel_type="reactor"
+        vessel_has_stirrer="True">
+        <CStopStir
+          vessel="reactor"
+          stirrer="stirrer_reactor" />
+      </StopStir>
+      <PrimePumpForAdd
+        reagent="water"
+        volume="3.0"
+        reagent_vessel="flask_water"
+        waste_vessel="waste_H"
+        prime_n_times="1"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0">
+        <Repeat
+          repeats="1">
+          <CMove
+            from_vessel="flask_water"
+            to_vessel="waste_H"
+            volume="3.0"
+            move_speed="40.0"
+            aspiration_speed="10.0"
+            dispense_speed="40.0"
+            from_port="0"
+            to_port="0"
+            through=""
+            use_backbone="True"
+            repeats="1" />
+        </Repeat>
+      </PrimePumpForAdd>
+      <CMove
+        from_vessel="flask_water"
+        to_vessel="reactor"
+        volume="10.0"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0"
+        from_port="0"
+        to_port="0"
+        through="None"
+        use_backbone="True"
+        repeats="1" />
+      <Wait
+        time="10.0"
+        wait_recording_speed="2000.0"
+        after_recording_speed="14.0">
+        <CSetRecordingSpeed
+          recording_speed="2000.0" />
+        <CWait
+          time="10.0" />
+        <CSetRecordingSpeed
+          recording_speed="14.0" />
+      </Wait>
+      <FlushTubing
+        to_vessel="reactor"
+        to_port="0"
+        volume="5.0"
+        dispense_speed="40.0"
+        through_cartridge="None"
+        flush_tube_vessel="None" />
+    </Add>
+    <Add
+      reagent="acid catalyst"
+      vessel="reactor"
+      volume="10.0"
+      mass="None"
+      port="0"
+      through="None"
+      move_speed="40.0"
+      aspiration_speed="10.0"
+      dispense_speed="40.0"
+      viscous="False"
+      time="None"
+      stir="False"
+      stir_speed="250.0"
+      confirm_solid="True"
+      anticlogging="False"
+      anticlogging_solvent="None"
+      anticlogging_solvent_volume="2.0"
+      anticlogging_reagent_volume="10.0"
+      through_cartridge="None"
+      reagent_vessel="flask_acid catalyst"
+      waste_vessel="waste_H"
+      vessel_type="reactor"
+      anticlogging_solvent_vessel="None"
+      prime_n_times="1"
+      priming_volume="3.0">
+      <StopStir
+        vessel="reactor"
+        vessel_type="reactor"
+        vessel_has_stirrer="True">
+        <CStopStir
+          vessel="reactor"
+          stirrer="stirrer_reactor" />
+      </StopStir>
+      <PrimePumpForAdd
+        reagent="acid catalyst"
+        volume="3.0"
+        reagent_vessel="flask_acid catalyst"
+        waste_vessel="waste_H"
+        prime_n_times="1"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0">
+        <Repeat
+          repeats="1">
+          <CMove
+            from_vessel="flask_acid catalyst"
+            to_vessel="waste_H"
+            volume="3.0"
+            move_speed="40.0"
+            aspiration_speed="10.0"
+            dispense_speed="40.0"
+            from_port="0"
+            to_port="0"
+            through=""
+            use_backbone="True"
+            repeats="1" />
+        </Repeat>
+      </PrimePumpForAdd>
+      <CMove
+        from_vessel="flask_acid catalyst"
+        to_vessel="reactor"
+        volume="10.0"
+        move_speed="40.0"
+        aspiration_speed="10.0"
+        dispense_speed="40.0"
+        from_port="0"
+        to_port="0"
+        through="None"
+        use_backbone="True"
+        repeats="1" />
+      <Wait
+        time="10.0"
+        wait_recording_speed="2000.0"
+        after_recording_speed="14.0">
+        <CSetRecordingSpeed
+          recording_speed="2000.0" />
+        <CWait
+          time="10.0" />
+        <CSetRecordingSpeed
+          recording_speed="14.0" />
+      </Wait>
+      <FlushTubing
+        to_vessel="reactor"
+        to_port="0"
+        volume="5.0"
+        dispense_speed="40.0"
+        through_cartridge="None"
+        flush_tube_vessel="None" />
+    </Add>
+    <Shutdown
+      vacuums=""
+      heaters="reactor"
+      stirrers=""
+      rotavaps=""
+      chillers="">
+      <CStopHeat
+        vessel="reactor"
+        heater="stirrer_reactor" />
+    </Shutdown>
+  </Procedure>
+
+</Synthesis>
+
+</XDL>

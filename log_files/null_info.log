@@ -1182,3 +1182,144 @@
 2025-11-06 10:26:58,654 ; INFO ; pump_execution ; MainThread ; Moving 25.0 mL from flask_NHз·H2O (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
 2025-11-06 10:26:58,654 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NHз·H2O -25.0 mL. Setting to 0.
 2025-11-06 10:26:58,654 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:34:34,785 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconium_nitrate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,785 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -3.0 mL. Setting to 0.
+2025-12-03 14:34:34,786 ; INFO ; pump_execution ; MainThread ; Moving 0.02 mL from flask_Zirconium_nitrate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,786 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -0.02 mL. Setting to 0.
+2025-12-03 14:34:34,786 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:34:34,787 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Water (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,787 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -3.0 mL. Setting to 0.
+2025-12-03 14:34:34,788 ; INFO ; pump_execution ; MainThread ; Moving 0.02 mL from flask_Water (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,788 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -0.02 mL. Setting to 0.
+2025-12-03 14:34:34,789 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:34:34,792 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NH4OH (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,793 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -3.0 mL. Setting to 0.
+2025-12-03 14:34:34,794 ; INFO ; pump_execution ; MainThread ; Moving 0.02 mL from flask_NH4OH (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,794 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -0.02 mL. Setting to 0.
+2025-12-03 14:34:34,795 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:34:34,797 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Acetone (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,797 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -3.0 mL. Setting to 0.
+2025-12-03 14:34:34,798 ; INFO ; pump_execution ; MainThread ; Moving 0.02 mL from flask_Acetone (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,798 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -0.02 mL. Setting to 0.
+2025-12-03 14:34:34,799 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:34:34,800 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconia_Powder (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,801 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -3.0 mL. Setting to 0.
+2025-12-03 14:34:34,802 ; INFO ; pump_execution ; MainThread ; Moving 0.02 mL from flask_Zirconia_Powder (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:34:34,802 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -0.02 mL. Setting to 0.
+2025-12-03 14:34:34,803 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:05,144 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconium_nitrate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,145 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -3.0 mL. Setting to 0.
+2025-12-03 14:36:05,145 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Zirconium_nitrate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,146 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -0.2 mL. Setting to 0.
+2025-12-03 14:36:05,146 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:05,147 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Water (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,147 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -3.0 mL. Setting to 0.
+2025-12-03 14:36:05,148 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Water (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,148 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -0.2 mL. Setting to 0.
+2025-12-03 14:36:05,148 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:05,150 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NH4OH (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,150 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -3.0 mL. Setting to 0.
+2025-12-03 14:36:05,151 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_NH4OH (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,151 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -0.2 mL. Setting to 0.
+2025-12-03 14:36:05,151 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:05,153 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Acetone (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,154 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -3.0 mL. Setting to 0.
+2025-12-03 14:36:05,155 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Acetone (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,156 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -0.2 mL. Setting to 0.
+2025-12-03 14:36:05,157 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:05,159 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconia_Powder (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,159 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -3.0 mL. Setting to 0.
+2025-12-03 14:36:05,161 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Zirconia_Powder (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:05,162 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -0.2 mL. Setting to 0.
+2025-12-03 14:36:05,163 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:38,171 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconium_nitrate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,171 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -3.0 mL. Setting to 0.
+2025-12-03 14:36:38,172 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Zirconium_nitrate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,172 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -0.2 mL. Setting to 0.
+2025-12-03 14:36:38,172 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:38,174 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Water (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,174 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -3.0 mL. Setting to 0.
+2025-12-03 14:36:38,175 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Water (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,175 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -0.2 mL. Setting to 0.
+2025-12-03 14:36:38,175 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:38,176 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NH4OH (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,177 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -3.0 mL. Setting to 0.
+2025-12-03 14:36:38,178 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_NH4OH (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,178 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -0.2 mL. Setting to 0.
+2025-12-03 14:36:38,178 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:38,180 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Acetone (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,181 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -3.0 mL. Setting to 0.
+2025-12-03 14:36:38,182 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Acetone (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,183 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -0.2 mL. Setting to 0.
+2025-12-03 14:36:38,183 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:36:38,186 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconia_Powder (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,186 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -3.0 mL. Setting to 0.
+2025-12-03 14:36:38,187 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Zirconia_Powder (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:36:38,188 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -0.2 mL. Setting to 0.
+2025-12-03 14:36:38,188 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:38:20,519 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconium_nitrate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,520 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -3.0 mL. Setting to 0.
+2025-12-03 14:38:20,521 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Zirconium_nitrate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,521 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -0.2 mL. Setting to 0.
+2025-12-03 14:38:20,521 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:38:20,522 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Water (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,522 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -3.0 mL. Setting to 0.
+2025-12-03 14:38:20,523 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Water (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,524 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -0.2 mL. Setting to 0.
+2025-12-03 14:38:20,524 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:38:20,526 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NH4OH (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,526 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -3.0 mL. Setting to 0.
+2025-12-03 14:38:20,527 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_NH4OH (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,527 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -0.2 mL. Setting to 0.
+2025-12-03 14:38:20,528 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:38:20,530 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Acetone (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,530 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -3.0 mL. Setting to 0.
+2025-12-03 14:38:20,531 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Acetone (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,532 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -0.2 mL. Setting to 0.
+2025-12-03 14:38:20,533 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:38:20,535 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconia_Powder (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,535 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -3.0 mL. Setting to 0.
+2025-12-03 14:38:20,536 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Zirconia_Powder (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:38:20,537 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconia_Powder -0.2 mL. Setting to 0.
+2025-12-03 14:38:20,537 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:42:00,190 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Zirconium_nitrate (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,190 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -3.0 mL. Setting to 0.
+2025-12-03 14:42:00,190 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Zirconium_nitrate (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,191 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Zirconium_nitrate -0.2 mL. Setting to 0.
+2025-12-03 14:42:00,191 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:42:00,192 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Water (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,192 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -3.0 mL. Setting to 0.
+2025-12-03 14:42:00,193 ; INFO ; pump_execution ; MainThread ; Moving 0.4 mL from flask_Water (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,193 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Water -0.4 mL. Setting to 0.
+2025-12-03 14:42:00,194 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:42:00,196 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_NH4OH (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,196 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -3.0 mL. Setting to 0.
+2025-12-03 14:42:00,197 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_NH4OH (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,197 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_NH4OH -0.2 mL. Setting to 0.
+2025-12-03 14:42:00,198 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:42:00,201 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_Acetone (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,205 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -3.0 mL. Setting to 0.
+2025-12-03 14:42:00,208 ; INFO ; pump_execution ; MainThread ; Moving 0.2 mL from flask_Acetone (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-03 14:42:00,209 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_Acetone -0.2 mL. Setting to 0.
+2025-12-03 14:42:00,209 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-03 14:42:00,210 ; INFO ; chempiler ; MainThread ; Waiting for 1800.0 seconds...
+2025-12-10 16:29:50,617 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_zirconium alkoxide (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,620 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_zirconium alkoxide -3.0 mL. Setting to 0.
+2025-12-10 16:29:50,621 ; INFO ; pump_execution ; MainThread ; Moving 40.0 mL from flask_zirconium alkoxide (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,621 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_zirconium alkoxide -40.0 mL. Setting to 0.
+2025-12-10 16:29:50,622 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-10 16:29:50,624 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_solvent (ethanol) (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,624 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_solvent (ethanol) -3.0 mL. Setting to 0.
+2025-12-10 16:29:50,625 ; INFO ; pump_execution ; MainThread ; Moving 40.0 mL from flask_solvent (ethanol) (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,626 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_solvent (ethanol) -40.0 mL. Setting to 0.
+2025-12-10 16:29:50,626 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-10 16:29:50,628 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_water (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,628 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_water -3.0 mL. Setting to 0.
+2025-12-10 16:29:50,630 ; INFO ; pump_execution ; MainThread ; Moving 10.0 mL from flask_water (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,631 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_water -10.0 mL. Setting to 0.
+2025-12-10 16:29:50,631 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...
+2025-12-10 16:29:50,633 ; INFO ; pump_execution ; MainThread ; Moving 3.0 mL from flask_acid catalyst (0) to waste_H (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,633 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_acid catalyst -3.0 mL. Setting to 0.
+2025-12-10 16:29:50,634 ; INFO ; pump_execution ; MainThread ; Moving 10.0 mL from flask_acid catalyst (0) to reactor (0). (Speed - Initial: 10.0, Mid: 40.0, End: 40.0)
+2025-12-10 16:29:50,635 ; WARNING ; pump_execution ; MainThread ; Negative flask volume: flask_acid catalyst -10.0 mL. Setting to 0.
+2025-12-10 16:29:50,635 ; INFO ; chempiler ; MainThread ; Waiting for 10.0 seconds...

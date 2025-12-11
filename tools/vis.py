@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import networkx as nx
 
 # ========== Step 1: 加载你的 JSON ==========
-src = "files/chem_yan.json"
+src = "files/llm_xdl.json"
 # save_name = "yan-k-g-x-y-ntri.png"
-save_name = "yan-test.png"
+save_name = "llm_xdl.png"
 
 # --------------------------
 # 1. 数据加载与关键信息提取
